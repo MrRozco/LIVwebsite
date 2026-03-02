@@ -12,14 +12,9 @@ type HeroProps = {
 };
 
 export function Hero({ slides }: HeroProps) {
-  const [mounted, setMounted] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
   const safeSlides = useMemo(() => (slides.length ? slides : []), [slides]);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     if (safeSlides.length <= 1) {
