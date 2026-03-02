@@ -1,0 +1,103 @@
+@import "./abstracts/colors";
+@import "./abstracts/typography";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/reset";
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./components/forms";
+@import "./sections/hero";
+@import "./sections/services";
+@import "./sections/introduction";
+@import "./sections/assessment";
+@import "./sections/assessments";
+@import "./sections/about";
+@import "./sections/stats";
+@import "./sections/team";
+@import "./sections/testimonials";
+@import "./sections/blog";
+@import "./sections/cta";
+@import "./sections/pricing";
+@import "./sections/contact";
+@import "./sections/faq";
+@import "./sections/shop";
+
+:root {
+  --color-primary: #23a91b;
+  --color-secondary: #081f28;
+  --color-accent: #e8f7f0;
+  --color-white: #ffffff;
+  --color-heading: #081f28;
+  --color-text: #5f6f68;
+  --color-muted: #8fa39a;
+  --color-bg-light: #f4fbf8;
+  --color-bg-dark: #0b1f16;
+  --color-border: #dceee6;
+  --color-shadow: rgba(0, 0, 0, 0.06);
+}
+
+body {
+  background: $color-white;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.text-muted {
+  color: $color-muted;
+}
+
+.section-title {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: $space-4;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: 6px 14px;
+  border-radius: $radius-pill;
+  background: $color-accent;
+  color: $color-secondary;
+  font-size: 13px;
+  font-weight: $font-weight-semibold;
+}
+
+.section__header .badge {
+  margin-bottom: $space-4;
+}
+
+.section__description {
+  white-space: pre-line;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

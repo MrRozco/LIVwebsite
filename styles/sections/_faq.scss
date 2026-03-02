@@ -1,0 +1,10 @@
+.faq__item {
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-5;
+  background: $color-white;
+}
+
+.faq__item + .faq__item {
+  margin-top: $space-4;
+}

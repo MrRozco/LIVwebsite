@@ -6,12 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
-    "next": "16.1.6",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.34.3",
+    "next": "^15.2.0",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-hook-form": "^7.71.2",
+    "sass": "^1.97.3",
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -19,6 +26,16 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx,scss,css,md,json}": [
+      "prettier --write"
+    ]
   }
 }

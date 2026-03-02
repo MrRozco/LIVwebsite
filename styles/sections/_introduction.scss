@@ -1,0 +1,74 @@
+.intro__wrapper {
+  display: grid;
+  gap: $space-10;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  padding: $space-10;
+  border-radius: $radius-lg;
+  background: linear-gradient(135deg, rgba(35, 169, 27, 0.08), rgba(232, 247, 240, 0.9));
+  border: 1px solid rgba(35, 169, 27, 0.12);
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -80px;
+  top: -80px;
+  border-radius: 50%;
+  background: rgba(35, 169, 27, 0.12);
+}
+
+.intro__content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  position: relative;
+  z-index: 1;
+}
+
+.intro__title {
+  font-size: 34px;
+  line-height: 1.2;
+  color: $color-secondary;
+}
+
+.intro__text {
+  font-size: 18px;
+  color: $color-text;
+}
+
+.intro__actions {
+  margin-top: $space-2;
+}
+
+.intro__media {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro__image {
+  width: min(420px, 100%);
+  height: auto;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  background: $color-white;
+}
+
+@include respond("lg") {
+  .intro__wrapper {
+    grid-template-columns: 1fr;
+    padding: $space-8;
+  }
+
+  .intro__media {
+    justify-content: flex-start;
+  }
+}

@@ -1,0 +1,5 @@
+<svg width="700" height="520" viewBox="0 0 700 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="520" fill="#E8F7F0"/>
+  <rect x="90" y="90" width="520" height="340" rx="30" fill="white" stroke="#DCEE E6"/>
+  <text x="150" y="270" fill="#081F28" font-size="30" font-family="Arial">About Visual</text>
+</svg>

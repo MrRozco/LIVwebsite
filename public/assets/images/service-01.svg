@@ -1,0 +1,5 @@
+<svg width="640" height="480" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="480" fill="#F4FBF8"/>
+  <rect x="80" y="80" width="480" height="320" rx="24" fill="#E8F7F0"/>
+  <text x="140" y="240" fill="#081F28" font-size="28" font-family="Arial">Service 01</text>
+</svg>

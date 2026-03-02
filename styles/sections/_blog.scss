@@ -1,0 +1,12 @@
+.blog__meta {
+  display: flex;
+  gap: $space-3;
+  color: $color-muted;
+  font-size: 14px;
+  margin-bottom: $space-3;
+}
+
+.blog__title {
+  font-size: 20px;
+  color: $color-secondary;
+}

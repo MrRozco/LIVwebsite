@@ -1,0 +1,19 @@
+.card {
+  background: $color-white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  border: 1px solid $color-border;
+  overflow: hidden;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: $shadow-md;
+}
+
+.card__body {
+  padding: $space-7;
+}

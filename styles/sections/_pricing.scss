@@ -1,0 +1,21 @@
+.pricing__card {
+  padding: $space-8;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  background: $color-white;
+  box-shadow: $shadow-sm;
+  height: 100%;
+}
+
+.pricing__price {
+  font-size: 40px;
+  color: $color-secondary;
+  font-weight: $font-weight-bold;
+  margin: $space-4 0;
+}
+
+.pricing__list {
+  display: grid;
+  gap: $space-3;
+  margin: $space-6 0;
+}

@@ -1,0 +1,73 @@
+.hero {
+  position: relative;
+  padding: $space-14 0 $space-12;
+  background: linear-gradient(135deg, rgba(232, 247, 240, 0.85), rgba(255, 255, 255, 0.7));
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: $space-10;
+  @include respond("lg") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero__slide {
+  position: relative;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-4;
+}
+
+.hero__title {
+  font-size: 46px;
+  line-height: 1.2;
+  color: $color-secondary;
+  @include respond("md") {
+    font-size: 36px;
+  }
+}
+
+.hero__highlight {
+  color: $color-primary;
+}
+
+.hero__text {
+  color: $color-hero-text;
+  font-size: 17px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+  margin-top: $space-6;
+}
+
+.hero__media {
+  position: relative;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+}
+
+.hero__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero__media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}

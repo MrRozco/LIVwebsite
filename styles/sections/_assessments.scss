@@ -1,0 +1,238 @@
+.assessments__header {
+  display: grid;
+  gap: $space-8;
+  margin-bottom: $space-10;
+}
+
+.assessments__steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-6;
+  @include respond("lg") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.assessments__step {
+  display: flex;
+  gap: $space-4;
+  padding: $space-5;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  background: $color-white;
+  box-shadow: $shadow-sm;
+}
+
+.assessments__step span {
+  font-weight: $font-weight-semibold;
+  font-size: 18px;
+  color: $color-primary;
+}
+
+.assessments__step h4 {
+  font-size: 18px;
+  margin-bottom: $space-2;
+  color: $color-secondary;
+}
+
+.assessments__step p {
+  color: $color-text;
+}
+
+.assessments__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-6;
+  @include respond("xl") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include respond("md") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.assessments__card {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  padding: $space-6;
+  display: grid;
+  gap: $space-4;
+  box-shadow: $shadow-sm;
+  height: 100%;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base;
+}
+
+.assessments__card:hover {
+  transform: translateY(-6px);
+  box-shadow: $shadow-md;
+}
+
+.assessments__card h3 {
+  font-size: 18px;
+  color: $color-secondary;
+}
+
+.assessments__card p {
+  color: $color-text;
+}
+
+.assessments__modal {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  display: grid;
+  place-items: center;
+  padding: $space-8 $space-5;
+}
+
+.assessments__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 31, 40, 0.6);
+}
+
+.assessments__modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(860px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: $color-white;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  padding: $space-8;
+  box-shadow: $shadow-md;
+  display: grid;
+  gap: $space-6;
+}
+
+.assessments__modal-header {
+  display: flex;
+  gap: $space-6;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.assessments__modal-header h3 {
+  font-size: 24px;
+  margin-bottom: $space-2;
+  color: $color-secondary;
+}
+
+.assessments__modal-header p {
+  color: $color-text;
+}
+
+.assessments__close {
+  border: 1px solid $color-border;
+  background: $color-white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  color: $color-secondary;
+  display: grid;
+  place-items: center;
+  transition:
+    background $transition-base,
+    transform $transition-base;
+}
+
+.assessments__close:hover {
+  background: $color-accent;
+  transform: scale(1.05);
+}
+
+.assessments__modal-body {
+  display: grid;
+  gap: $space-5;
+}
+
+.assessments__form {
+  display: grid;
+  gap: $space-6;
+}
+
+.assessments__form-intro {
+  color: $color-text;
+}
+
+.assessments__response {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
+
+.assessments__response span {
+  padding: 6px 12px;
+  border-radius: $radius-pill;
+  background: $color-accent;
+  color: $color-secondary;
+  font-size: 13px;
+  font-weight: $font-weight-semibold;
+}
+
+.assessments__questions {
+  display: grid;
+  gap: $space-5;
+}
+
+.assessments__question {
+  padding: $space-4;
+  border-radius: $radius-md;
+  border: 1px solid $color-border;
+  background: $color-bg-light;
+  display: grid;
+  gap: $space-4;
+}
+
+.assessments__question p {
+  color: $color-secondary;
+  font-weight: $font-weight-medium;
+}
+
+.assessments__options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: $space-3;
+}
+
+.assessments__options label {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: 14px;
+  color: $color-text;
+}
+
+.assessments__options input {
+  accent-color: $color-primary;
+}
+
+.assessments__modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  justify-content: flex-end;
+}
+
+@include respond("md") {
+  .assessments__options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.assessments__modal-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@include respond("md") {
+  .assessments__modal-card {
+    padding: $space-6;
+  }
+}

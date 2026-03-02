@@ -1,0 +1,40 @@
+.services__card {
+  display: grid;
+  gap: $space-5;
+  height: 100%;
+  padding: $space-6;
+}
+
+.services__image {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services__card .card__body {
+  padding: 0;
+  display: grid;
+  gap: $space-4;
+}
+
+.services__image-img {
+  object-fit: contain;
+}
+
+.services__title {
+  font-size: 20px;
+  font-weight: $font-weight-semibold;
+  color: $color-secondary;
+}
+
+.services__link {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+}

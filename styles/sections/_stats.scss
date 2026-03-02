@@ -1,0 +1,25 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: $space-6;
+  @include respond("lg") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include respond("md") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stats__item {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $space-7;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+.stats__value {
+  font-size: 36px;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}

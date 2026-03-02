@@ -1,0 +1,155 @@
+.cta {
+  padding: 0;
+  margin-bottom: $space-10;
+}
+
+.cta__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: $space-10;
+  padding: $space-11;
+  border-radius: $radius-lg;
+  background: linear-gradient(130deg, #0b1f16, #0f2a20 45%, #163b2d 100%);
+  color: $color-white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+}
+
+.cta__layout::before {
+  content: "";
+  position: absolute;
+  inset: -120px auto auto -160px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(35, 169, 27, 0.18);
+}
+
+.cta__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: $space-4;
+}
+
+.cta__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  width: fit-content;
+  justify-self: start;
+  padding: 6px 14px;
+  border-radius: $radius-pill;
+  background: rgba(232, 247, 240, 0.16);
+  color: $color-white;
+  font-size: 13px;
+  font-weight: $font-weight-semibold;
+}
+
+.cta__content h2 {
+  font-size: 36px;
+  line-height: 1.15;
+  color: $color-white;
+}
+
+.cta__content p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18px;
+}
+
+.cta__bullets {
+  display: grid;
+  gap: $space-3;
+  margin-top: $space-2;
+}
+
+.cta__bullets li {
+  display: flex;
+  gap: $space-3;
+  align-items: flex-start;
+}
+
+.cta__bullets li::before {
+  content: "✓";
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+  margin-top: 2px;
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+  margin-top: $space-4;
+}
+
+.cta__actions .btn--outline {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: $color-white;
+}
+
+.cta__reassurance {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta__card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: $radius-lg;
+  padding: $space-7;
+  display: grid;
+  gap: $space-6;
+  backdrop-filter: blur(6px);
+}
+
+.cta__highlight {
+  display: grid;
+  gap: $space-2;
+  padding: $space-4;
+  border-radius: $radius-md;
+  background: rgba(35, 169, 27, 0.18);
+}
+
+.cta__highlight span {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.cta__highlight strong {
+  font-size: 28px;
+}
+
+.cta__card-body h3 {
+  font-size: 20px;
+  margin-bottom: $space-3;
+}
+
+.cta__card-body ol {
+  display: grid;
+  gap: $space-3;
+  padding-left: $space-5;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@include respond("lg") {
+  .cta__layout {
+    grid-template-columns: 1fr;
+    padding: $space-9;
+  }
+
+  .cta__actions {
+    justify-content: flex-start;
+  }
+}
+
+@include respond("md") {
+  .cta__layout {
+    padding: $space-8;
+  }
+}

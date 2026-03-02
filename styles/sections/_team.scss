@@ -1,0 +1,14 @@
+.team__card {
+  text-align: center;
+}
+
+.team__image {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  margin-bottom: $space-5;
+}
+
+.team__role {
+  color: $color-muted;
+  font-size: 14px;
+}

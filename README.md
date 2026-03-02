@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NutriCare Wellness – Next.js 15 (App Router)
 
-## Getting Started
+This project is a fully owned, license-clean recreation of the NutriCare Wellness site using Next.js 15, TypeScript, and SCSS. The app is designed for static site generation by default and optimized for performance and SEO.
 
-First, run the development server:
+## Requirements
+
+- Node.js 20+
+- npm 10+
+
+## Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & Run
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Static Export (Optional)
 
-To learn more about Next.js, take a look at the following resources:
+Static export works for all static pages.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm run export
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If you need `next export`, add the following to scripts and enable `output: "export"` in next.config.ts.
 
-## Deploy on Vercel
+## Design Tokens & SCSS Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All colors, typography, spacing, and breakpoints live in:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- styles/abstracts/\_colors.scss
+- styles/abstracts/\_typography.scss
+- styles/abstracts/\_variables.scss
+- styles/abstracts/\_breakpoints.scss
+
+Change a token once and the entire site updates.
+
+## Adding Pages
+
+Create a new route inside:
+
+- app/(site)/your-page/page.tsx
+
+Add navigation entries in:
+
+- lib/data.ts → `navItems`
+
+## Data Management
+
+All static content lives in:
+
+- lib/data.ts
+
+Update the arrays for services, team members, testimonials, blog posts, pricing, FAQ, gallery, and shop items.
+
+## Components
+
+- components/ui: reusable primitives (Button, Card, Input)
+- components/globals: layout (Header, Footer, Navbar)
+- components/custom: page sections (Hero, ServicesSection, etc.)
+
+## License Cleanup
+
+All text, labels, and assets are original placeholders. Replace `public/assets` images with your own owned assets as needed.
+
+## SEO
+
+- Metadata per page in each route file
+- robots.ts and sitemap.ts in app/
+
+## Notes
+
+- Primary home is in app/page.tsx (temporary due to tooling limitations). Move to app/(site)/page.tsx once app/page.tsx is removed.

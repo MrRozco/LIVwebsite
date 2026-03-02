@@ -1,0 +1,51 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: 14px 28px;
+  border-radius: $radius-pill;
+  border: 1px solid transparent;
+  background: $color-primary;
+  color: $color-white;
+  font-weight: $font-weight-semibold;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base,
+    background $transition-base,
+    color $transition-base;
+  box-shadow: $shadow-sm;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: $shadow-md;
+  color: $color-white;
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: $color-primary;
+  color: $color-primary;
+}
+
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  color: $color-primary;
+}
+
+.btn--ghost {
+  background: $color-accent;
+  color: $color-secondary;
+  border-color: transparent;
+}
+
+.btn--ghost:hover,
+.btn--ghost:focus-visible {
+  color: $color-secondary;
+}
+
+.btn--icon {
+  padding: 12px 18px;
+}

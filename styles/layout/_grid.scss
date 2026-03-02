@@ -1,0 +1,48 @@
+.container {
+  @include container(false);
+}
+
+.container--wide {
+  @include container(true);
+}
+
+.section {
+  padding: $space-12 0;
+}
+
+.section--light {
+  background: $color-bg-light;
+}
+
+.section__header {
+  max-width: 680px;
+  margin-bottom: $space-10;
+}
+
+.grid {
+  display: grid;
+  gap: $space-7;
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  @include respond("lg") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include respond("md") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  @include respond("xl") {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  @include respond("lg") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @include respond("md") {
+    grid-template-columns: 1fr;
+  }
+}

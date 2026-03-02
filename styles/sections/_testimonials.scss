@@ -1,0 +1,20 @@
+.testimonial {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $space-7;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  height: 100%;
+}
+
+.testimonial__quote {
+  font-size: 18px;
+  color: $color-secondary;
+  margin-bottom: $space-5;
+}
+
+.testimonial__meta {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}

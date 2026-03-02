@@ -1,0 +1,5 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="420" fill="#F4FBF8"/>
+  <rect x="80" y="80" width="480" height="260" rx="20" fill="white"/>
+  <text x="140" y="220" fill="#081F28" font-size="26" font-family="Arial">Blog 02</text>
+</svg>

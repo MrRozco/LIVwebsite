@@ -1,0 +1,22 @@
+@use "sass:map";
+@import "./breakpoints";
+
+@mixin respond($key) {
+  $size: map.get($breakpoints, $key);
+  @if $size {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin container($wide: false) {
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  max-width: if($wide, $container-wide, $container-max);
+  @include respond("md") {
+    padding-left: $container-padding-mobile;
+    padding-right: $container-padding-mobile;
+  }
+}

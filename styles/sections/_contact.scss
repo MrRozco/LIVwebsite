@@ -1,0 +1,18 @@
+.contact__grid {
+  display: grid;
+  gap: $space-10;
+  grid-template-columns: 1.2fr 1fr;
+  @include respond("lg") {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact__card {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $space-7;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  display: grid;
+  gap: $space-5;
+}

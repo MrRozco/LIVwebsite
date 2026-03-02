@@ -1,0 +1,184 @@
+.assessment {
+  position: relative;
+}
+
+.assessment__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $space-10;
+  align-items: center;
+  padding: $space-10;
+  border-radius: $radius-lg;
+  background: $color-bg-light;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+}
+
+.assessment__content .section__header {
+  margin-bottom: $space-4;
+}
+
+.assessment__list {
+  display: grid;
+  gap: $space-3;
+  color: $color-text;
+}
+
+.assessment__list li::before {
+  content: "•";
+  color: $color-primary;
+  margin-right: $space-2;
+}
+
+.assessment__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+  margin-top: $space-5;
+}
+
+.assessment__panel {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $space-7;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  display: grid;
+  gap: $space-4;
+}
+
+.assessment__panel-title {
+  font-weight: $font-weight-semibold;
+  font-size: 20px;
+  color: $color-secondary;
+}
+
+.assessment__panel-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+}
+
+.assessment__panel-items span {
+  padding: 6px 12px;
+  border-radius: $radius-pill;
+  background: $color-accent;
+  color: $color-secondary;
+  font-size: 13px;
+  font-weight: $font-weight-semibold;
+}
+
+.assessment__modal {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  display: grid;
+  place-items: center;
+  padding: $space-8 $space-5;
+}
+
+.assessment__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 31, 40, 0.6);
+}
+
+.assessment__modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(960px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  background: $color-white;
+  border-radius: $radius-lg;
+  border: 1px solid $color-border;
+  padding: $space-8;
+  box-shadow: $shadow-md;
+  display: grid;
+  gap: $space-6;
+}
+
+.assessment__modal-header {
+  display: flex;
+  gap: $space-6;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.assessment__modal-header h3 {
+  font-size: 26px;
+  margin-bottom: $space-2;
+  color: $color-secondary;
+}
+
+.assessment__modal-header p {
+  color: $color-text;
+}
+
+.assessment__close {
+  border: 1px solid $color-border;
+  background: $color-white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  color: $color-secondary;
+  display: grid;
+  place-items: center;
+  transition:
+    background $transition-base,
+    transform $transition-base;
+}
+
+.assessment__close:hover {
+  background: $color-accent;
+  transform: scale(1.05);
+}
+
+.assessment__form {
+  display: grid;
+  gap: $space-6;
+}
+
+.assessment__section {
+  display: grid;
+  gap: $space-4;
+}
+
+.assessment__section h4 {
+  font-size: 20px;
+  color: $color-secondary;
+}
+
+.assessment__section label {
+  display: block;
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  color: $color-secondary;
+  margin-bottom: $space-2;
+}
+
+.assessment__dob {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-3;
+}
+
+.assessment__submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@include respond("lg") {
+  .assessment__grid {
+    grid-template-columns: 1fr;
+    padding: $space-8;
+  }
+}
+
+@include respond("md") {
+  .assessment__modal-card {
+    padding: $space-6;
+  }
+}
