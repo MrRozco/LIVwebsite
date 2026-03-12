@@ -9,6 +9,7 @@
   background: $color-primary;
   color: $color-white;
   font-weight: $font-weight-semibold;
+  cursor: pointer;
   transition:
     transform $transition-base,
     box-shadow $transition-base,
@@ -24,6 +25,11 @@
   color: $color-white;
 }
 
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: $shadow-sm;
+}
+
 .btn--outline {
   background: transparent;
   border-color: $color-primary;
@@ -33,6 +39,12 @@
 .btn--outline:hover,
 .btn--outline:focus-visible {
   color: $color-primary;
+}
+
+.btn--outline:active,
+.btn--ghost:active {
+  transform: translateY(1px);
+  box-shadow: $shadow-sm;
 }
 
 .btn--ghost {

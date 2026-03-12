@@ -31,11 +31,11 @@ export function AssessmentSection({ content }: AssessmentSectionProps) {
             ))}
           </ul>
           <div className="assessment__actions">
-            <Button label={content.primaryCtaLabel} href={content.primaryCtaHref} />
+            <Button label={content.secondaryCtaLabel} onClick={() => setIsOpen(true)} />
             <Button
-              label={content.secondaryCtaLabel}
+              label={content.primaryCtaLabel}
+              href={content.primaryCtaHref}
               variant="outline"
-              onClick={() => setIsOpen(true)}
             />
           </div>
         </div>

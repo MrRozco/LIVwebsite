@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Layout } from "@/components/globals/Layout";
 
 export const metadata: Metadata = {
-  title: "NutriCare Wellness",
+  title: "Living in Vibrance",
 };
 
 type SiteLayoutProps = {

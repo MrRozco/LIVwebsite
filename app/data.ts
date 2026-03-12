@@ -86,7 +86,7 @@ export const services: Service[] = [
     image: "/assets/images/serene_woman.png",
     imageAlt: "Illustration representing sleep and stress balance",
     href: "/assessment",
-    ctaLabel: "Start Reclaiming Restful Balance",
+    ctaLabel: "Reclaim Restful Balance",
   },
 ];
 
@@ -95,7 +95,7 @@ export const introductionBlock: IntroductionBlock = {
   description:
     "Are you navigating challenges related to overweight, hypertension, or cardiovascular disease and feeling overwhelmed? Dr. Obi empowers individuals to achieve clarity in their health journey, emotional resilience during lifestyle changes, and personal agency amid impactful concerns. Supporting those with courage, openness, and determination, she screens for and manages conditions related to weight, hypertension, and diabetes—freeing time, money, and energy for emotional, financial, and spiritual well-being.",
   ctaLabel: "Learn More About Dr. Obi",
-  ctaHref: "/contact",
+  ctaHref: "/about",
   image: "/assets/images/Dr_obi.jpg",
   imageAlt: "Portrait of Dr. Evangeline Obi",
 };
@@ -177,23 +177,24 @@ export const testimonialsHeader: SectionHeader = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Mia Carter",
+    name: "Alana R.",
     role: "Client",
     quote:
-      "The plan felt custom-made for my life. I finally have energy and structure without feeling restricted.",
+      "The assessment process made everything feel manageable. I finally understood what was driving my fatigue and had a clear, practical plan that fit my schedule.",
     image: "/assets/images/testimonial-01.svg",
   },
   {
-    name: "Devon Brooks",
-    role: "Fitness Enthusiast",
-    quote: "The coaching gave me clarity on what to eat and when. Recovery has been incredible.",
+    name: "Devin S.",
+    role: "Client",
+    quote:
+      "I appreciated the thoroughness without the overwhelm. Each step built on the last, and I felt supported the entire way through.",
     image: "/assets/images/testimonial-02.svg",
   },
   {
-    name: "Harper Nguyen",
-    role: "Busy Professional",
+    name: "Marisol T.",
+    role: "Client",
     quote:
-      "Simple, realistic, and supportive. The guidance fits my work schedule and keeps me on track.",
+      "The recommendations were realistic and actionable. Within weeks I had more energy, better sleep, and a calmer relationship with food.",
     image: "/assets/images/testimonial-03.svg",
   },
 ];
@@ -283,7 +284,7 @@ export const contactInfo: ContactInfo = {
   title: "Let’s design your wellness plan",
   description: "Share your goals and we’ll reply with availability within one business day.",
   studio: "42 Wellness Avenue, Portland",
-  email: "hello@nutricare.com",
+  email: "hello@livinginvibrance.com",
   phone: "+1 (555) 840-2398",
   hours: "Mon–Fri, 8am–6pm",
 };

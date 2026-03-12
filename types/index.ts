@@ -64,6 +64,7 @@ export type AssessmentItem = {
   summary: string;
   ctaLabel: string;
   modalIntro: string;
+  category?: string;
   placeholderText?: string;
   form?: {
     mode?: "scale" | "fields";
@@ -72,6 +73,8 @@ export type AssessmentItem = {
     personalInfo: {
       firstNameLabel: string;
       lastNameLabel: string;
+      emailLabel?: string;
+      phoneLabel?: string;
       ageLabel: string;
       genderLabel: string;
       genderOptions: string[];
@@ -84,12 +87,14 @@ export type AssessmentItem = {
     fieldSections?: {
       title: string;
       description?: string;
+      layout?: "grid" | "stacked";
       fields: {
         name: string;
         label: string;
         type: "text" | "number" | "date" | "tel" | "textarea" | "select";
         placeholder?: string;
         options?: string[];
+        fullWidth?: boolean;
       }[];
     }[];
   };

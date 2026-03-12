@@ -1,6 +1,6 @@
-# NutriCare Wellness – Next.js 15 (App Router)
+# Living in Vibrance – Next.js 15 (App Router)
 
-This project is a fully owned, license-clean recreation of the NutriCare Wellness site using Next.js 15, TypeScript, and SCSS. The app is designed for static site generation by default and optimized for performance and SEO.
+This project is a fully owned, license-clean Living in Vibrance site using Next.js 15, TypeScript, and SCSS. The app is designed for static site generation by default and optimized for performance and SEO.
 
 ## Requirements
 

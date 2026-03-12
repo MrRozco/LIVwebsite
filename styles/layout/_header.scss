@@ -29,6 +29,32 @@
   font-size: 13px;
 }
 
+.header__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: $color-white;
+  transition:
+    background $transition-base,
+    transform $transition-base,
+    border-color $transition-base;
+}
+
+.header__social-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.header__social-icon {
+  width: 14px;
+  height: 14px;
+}
+
 .header__main {
   display: grid;
   grid-template-columns: 180px 1fr;

@@ -9,8 +9,8 @@ export const contactHeader: SectionHeader = {
 export const contactInfo: ContactInfo = {
   title: "Let’s design your wellness plan",
   description: "Share your goals and we’ll reply with availability within one business day.",
-  studio: "42 Wellness Avenue, Portland",
-  email: "hello@nutricare.com",
-  phone: "+1 (555) 840-2398",
-  hours: "Mon–Fri, 8am–6pm",
+  studio: "9701 Apollo Dr, Largo, MD 20774",
+  email: "",
+  phone: "(301) 675-6700",
+  hours: "Mon – Sat: 7:00 AM – 7:00 PM | Sun: Closed",
 };

@@ -8,7 +8,7 @@
 .footer__top {
   display: grid;
   gap: $space-8;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   @include respond("lg") {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -25,26 +25,6 @@
   gap: $space-3;
   font-size: 22px;
   font-weight: $font-weight-bold;
-  @include respond("md") {
-    justify-content: center;
-  }
-}
-
-.footer__form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: $space-3;
-  margin-top: $space-4;
-  @include respond("md") {
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-.footer__links {
-  display: flex;
-  gap: $space-4;
   @include respond("md") {
     justify-content: center;
   }

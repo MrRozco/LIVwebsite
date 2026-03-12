@@ -108,8 +108,8 @@
 
 .cta__highlight {
   display: grid;
-  gap: $space-2;
-  padding: $space-4;
+  gap: $space-1;
+  padding: $space-3;
   border-radius: $radius-md;
   background: rgba(35, 169, 27, 0.18);
 }
@@ -119,15 +119,18 @@
   letter-spacing: 0.08em;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.72);
+  line-height: 1.1;
 }
 
 .cta__highlight strong {
   font-size: 28px;
+  line-height: 1.1;
 }
 
 .cta__card-body h3 {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: $space-3;
+  color: $color-white;
 }
 
 .cta__card-body ol {

@@ -28,6 +28,10 @@
   }
 }
 
+.form-grid--stacked {
+  grid-template-columns: 1fr;
+}
+
 .form-grid__full {
   grid-column: 1 / -1;
 }

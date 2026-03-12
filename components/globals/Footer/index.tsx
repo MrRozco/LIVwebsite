@@ -10,7 +10,7 @@ export function Footer() {
           <div className="footer__logo">
             <Image
               src="/assets/images/livinginvibrance_logo_font.png"
-              alt="NutriCare"
+              alt="Living in Vibrance"
               width={200}
               height={200}
             />
@@ -36,28 +36,25 @@ export function Footer() {
         <div>
           <h4>Contact</h4>
           <ul>
-            <li>+1 (555) 840-2398</li>
-            <li>hello@nutricare.com</li>
-            <li>42 Wellness Avenue, Portland</li>
+            <li>
+              <a href="tel:+13016756700">(301) 675-6700</a>
+            </li>
+            <li>
+              <a
+                href="https://maps.google.com/?q=9701+Apollo+Dr,+Largo,+MD+20774"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                9701 Apollo Dr, Largo, MD 20774
+              </a>
+            </li>
+            <li>Mon – Sat: 7:00 AM – 7:00 PM</li>
+            <li>Sun: Closed</li>
           </ul>
-        </div>
-        <div>
-          <h4>Newsletter</h4>
-          <p>Weekly tips, recipes, and wellness insights.</p>
-          <form className="footer__form">
-            <input className="input" placeholder="Email address" />
-            <button className="btn btn--ghost" type="submit">
-              Join
-            </button>
-          </form>
         </div>
       </div>
       <div className="container footer__bottom">
         <span>© 2026 Living in Vibrance. All rights reserved.</span>
-        <div className="footer__links">
-          <span>Privacy</span>
-          <span>Terms</span>
-        </div>
       </div>
     </footer>
   );

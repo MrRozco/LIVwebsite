@@ -16,6 +16,8 @@ type ContactFormValues = {
   phone: string;
   preferredTime: string;
   message: string;
+  website?: string;
+  formStart?: string;
 };
 
 type ContactSectionProps = {
@@ -26,10 +28,17 @@ type ContactSectionProps = {
 export function ContactSection({ header, info }: ContactSectionProps) {
   const { register, handleSubmit, reset, formState } = useForm<ContactFormValues>();
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [formStart] = useState(() => Date.now().toString());
 
   const onSubmit = async (values: ContactFormValues) => {
     try {
-      await submitContact(values);
+      const response = await submitContact({
+        ...values,
+        formStart,
+      });
+      if (!response.ok) {
+        throw new Error(response.error ?? "submit-failed");
+      }
       setStatus("success");
       reset();
     } catch {
@@ -48,13 +57,17 @@ export function ContactSection({ header, info }: ContactSectionProps) {
           />
           <div className="contact__card">
             <p>
-              <strong>Studio</strong>: {info.studio}
+              <strong>Studio</strong>:{" "}
+              <a
+                href="https://maps.google.com/?q=9701+Apollo+Dr,+Largo,+MD+20774"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {info.studio}
+              </a>
             </p>
             <p>
-              <strong>Email</strong>: {info.email}
-            </p>
-            <p>
-              <strong>Phone</strong>: {info.phone}
+              <strong>Phone</strong>: <a href="tel:+13016756700">{info.phone}</a>
             </p>
             <p>
               <strong>Hours</strong>: {info.hours}
@@ -62,6 +75,15 @@ export function ContactSection({ header, info }: ContactSectionProps) {
           </div>
         </div>
         <form className="contact__card" onSubmit={handleSubmit(onSubmit)}>
+          <input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            className="sr-only"
+            aria-hidden="true"
+            {...register("website")}
+          />
+          <input type="hidden" value={formStart} {...register("formStart")} />
           <div className="form-grid">
             <Input placeholder="Full name" {...register("name", { required: true })} />
             <Input

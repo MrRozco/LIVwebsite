@@ -51,6 +51,22 @@
   }
 }
 
+.assessments__groups {
+  display: grid;
+  gap: $space-8;
+}
+
+.assessments__group {
+  display: grid;
+  gap: $space-5;
+}
+
+.assessments__group-title {
+  font-size: 20px;
+  color: $color-secondary;
+  margin: 0;
+}
+
 .assessments__card {
   background: $color-white;
   border: 1px solid $color-border;
