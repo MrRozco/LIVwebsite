@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -85,7 +86,14 @@ export function AssessmentsSection({ content }: AssessmentsSectionProps) {
           <div className="assessments__overlay" onClick={() => setActiveModal(null)} />
           <div className="assessments__modal-card">
             <div className="assessments__modal-header">
-              <div>
+              <div className="assessments__modal-title">
+                <Image
+                  src="/assets/images/livinginvibrance_logo_font.png"
+                  alt="Living in Vibrance"
+                  width={120}
+                  height={120}
+                  className="assessments__modal-logo"
+                />
                 <h3>{activeModal.title}</h3>
                 <p>{activeModal.modalIntro}</p>
               </div>

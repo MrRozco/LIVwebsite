@@ -132,6 +132,16 @@
   justify-content: space-between;
 }
 
+.assessments__modal-title {
+  display: grid;
+  gap: $space-3;
+}
+
+.assessments__modal-logo {
+  width: 120px;
+  height: auto;
+}
+
 .assessments__modal-header h3 {
   font-size: 24px;
   margin-bottom: $space-2;

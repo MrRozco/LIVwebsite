@@ -594,168 +594,2774 @@ export const assessmentsContent: AssessmentsPageContent = {
             layout: "stacked",
             fields: [
               {
-                name: "assignedTo",
-                label: "Assigned to",
-                type: "text",
-                placeholder: "Assigned to",
-              },
-              {
                 name: "dateOfBirth",
-                label: "Date of Birth",
+                label: "Date of Birth (Required)",
                 type: "date",
                 placeholder: "Choose Date of Birth",
               },
               {
                 name: "age",
-                label: "Age",
+                label: "Age (Required)",
                 type: "number",
-                placeholder: "Age",
+                placeholder: "Response",
               },
               {
                 name: "primaryAddress",
-                label: "Primary address",
+                label: "What is your primary address?",
                 type: "text",
                 placeholder: "Street Address",
               },
               {
-                name: "primaryPhoneNumber",
-                label: "Primary phone number",
-                type: "tel",
-                placeholder: "Phone Number",
+                name: "streetAddress2",
+                label: "Street 2 Address",
+                type: "text",
+                placeholder: "Street 2 Address",
               },
+              { name: "city", label: "City", type: "text", placeholder: "City" },
+              { name: "state", label: "State", type: "text", placeholder: "State" },
+              { name: "zipCode", label: "Zip Code", type: "text", placeholder: "Zip Code" },
+              { name: "country", label: "Country", type: "text", placeholder: "Country" },
               {
                 name: "primaryPhoneCountry",
-                label: "Country code",
+                label: "Primary Phone Number - Country Code",
                 type: "text",
                 placeholder: "Country Code",
               },
               {
-                name: "phoneOther",
-                label: "Other phone",
+                name: "primaryPhoneNumber",
+                label: "Primary Phone Number",
                 type: "tel",
-                placeholder: "Other phone",
+                placeholder: "Phone Number",
               },
-              {
-                name: "phoneWork",
-                label: "Work phone",
-                type: "tel",
-                placeholder: "Work phone",
-              },
+              { name: "phoneOther", label: "Phone (Other)", type: "tel", placeholder: "Response" },
+              { name: "phoneWork", label: "Phone (Work)", type: "tel", placeholder: "Response" },
               {
                 name: "geneticBackground",
-                label: "Genetic Background",
-                type: "text",
-                placeholder: "Response",
+                label: "Genetic Background (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
               },
               {
                 name: "lastMedicalCare",
-                label: "When, where, and from whom did you last receive medical or health care?",
+                label: "When, where and from whom did you last receive medical or health care?",
                 type: "textarea",
                 placeholder: "Response",
               },
-            ],
-          },
-          {
-            title: "Emergency Contact",
-            layout: "stacked",
-            fields: [
               {
-                name: "emergencyContactName",
-                label: "Name",
+                name: "emergencyContact",
+                label: "Emergency Contact",
                 type: "text",
-                placeholder: "Name",
+                placeholder: "Response",
               },
               {
                 name: "emergencyRelationship",
                 label: "Relationship",
                 type: "text",
-                placeholder: "Relationship",
+                placeholder: "Response",
               },
               {
                 name: "emergencyPhoneHome",
-                label: "Home phone",
+                label: "Emergency Contact's Phone (Home)",
                 type: "tel",
-                placeholder: "Home phone",
+                placeholder: "Response",
               },
               {
                 name: "emergencyPhoneCell",
-                label: "Cell phone",
+                label: "Emergency Contact's Phone (Cell)",
                 type: "tel",
-                placeholder: "Cell phone",
+                placeholder: "Response",
               },
               {
                 name: "emergencyPhoneWork",
-                label: "Work phone",
+                label: "Emergency Contact's Phone (Work)",
                 type: "tel",
-                placeholder: "Work phone",
+                placeholder: "Response",
               },
             ],
           },
           {
             title: "Current Health Complaints",
             description:
-              "Please list current and ongoing health complaints in order of priority. Give each concern a severity ranking (1 = mildest, 5 = most severe).",
+              "Please list CURRENT and ONGOING health complaints in order of priority. After each response, press Enter to add the next health complaint.",
             layout: "stacked",
             fields: [
               {
-                name: "healthComplaint1",
-                label: "1. Health complaint",
-                type: "text",
-                placeholder: "Complaint",
+                name: "currentHealthComplaints",
+                label: "Complaints",
+                type: "textarea",
+                placeholder: "List your health complaints",
               },
+            ],
+          },
+          {
+            title: "Readiness Assessment",
+            description:
+              "For each area below, rate your willingness to change on a scale of 0-5, where 5 = Very Willing and 0 = Not Willing.",
+            layout: "stacked",
+            fields: [
               {
-                name: "healthComplaintSeverity1",
-                label: "Severity (1-5)",
+                name: "readinessDiet",
+                label: "Significantly modify your diet",
                 type: "select",
-                options: ["Select", "1", "2", "3", "4", "5"],
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
               },
               {
-                name: "healthComplaint2",
-                label: "2. Health complaint",
-                type: "text",
-                placeholder: "Complaint",
-              },
-              {
-                name: "healthComplaintSeverity2",
-                label: "Severity (1-5)",
+                name: "readinessSupplements",
+                label: "Take several nutritional supplements each day",
                 type: "select",
-                options: ["Select", "1", "2", "3", "4", "5"],
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
               },
               {
-                name: "healthComplaint3",
-                label: "3. Health complaint",
-                type: "text",
-                placeholder: "Complaint",
-              },
-              {
-                name: "healthComplaintSeverity3",
-                label: "Severity (1-5)",
+                name: "readinessFoodLog",
+                label: "Keep a record of everything you eat each day",
                 type: "select",
-                options: ["Select", "1", "2", "3", "4", "5"],
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
               },
               {
-                name: "healthComplaint4",
-                label: "4. Health complaint",
-                type: "text",
-                placeholder: "Complaint",
-              },
-              {
-                name: "healthComplaintSeverity4",
-                label: "Severity (1-5)",
+                name: "readinessLifestyle",
+                label: "Modify your lifestyle (e.g., work demands, sleep habits)",
                 type: "select",
-                options: ["Select", "1", "2", "3", "4", "5"],
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
               },
               {
-                name: "healthComplaint5",
-                label: "5. Health complaint",
-                type: "text",
-                placeholder: "Complaint",
-              },
-              {
-                name: "healthComplaintSeverity5",
-                label: "Severity (1-5)",
+                name: "readinessRelaxation",
+                label: "Practice a relaxation technique",
                 type: "select",
-                options: ["Select", "1", "2", "3", "4", "5"],
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessExercise",
+                label: "Engage in regular exercise",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessConfidence",
+                label:
+                  "How confident are you in your ability to organize and follow through on the above-mentioned health-related activities?",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessConfidenceNotes",
+                label:
+                  "If you are Not confident, what aspects of yourself or your life lead you to question your capacity to follow through?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "readinessHouseholdSupport",
+                label:
+                  "At the present time, how supportive do you think the people in your household will be to your implementing the above changes?",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessStaffSupport",
+                label:
+                  "How much ongoing support (e.g., correspondence, coaching) from our staff would be helpful to you as you implement your personal health program?",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+            ],
+          },
+          {
+            title: "Health Goals",
+            layout: "stacked",
+            fields: [
+              {
+                name: "goalVisit",
+                label: "What do you hope to achieve in your visit with us?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalLastWell",
+                label: "When was the last time you felt well?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalTriggerChange",
+                label: "Did something trigger your change in health?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalFeelBetter",
+                label: "What makes you feel better?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalFeelWorse",
+                label: "What makes you feel worse?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalConditionAffects",
+                label: "How does your condition affect you?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalWhatHappening",
+                label: "What do you think is happening and why?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalNeedsToHappen",
+                label: "What do you feel needs to happen for you to get better?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Patient Birth",
+            layout: "stacked",
+            fields: [
+              { name: "birthBorn", label: "You were born:", type: "text", placeholder: "Response" },
+              {
+                name: "birthComplications",
+                label: "Were there any Pregnancy or Birth Complications?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "birthComplicationsExplain",
+                label: "Please explain any Pregnancy or Birth Complications.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "birthBreastfed",
+                label: "Were you breastfed?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "birthBreastfedHowLong",
+                label: "How long were you breastfed?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthKnowFormula",
+                label: "I know what type of formula was used for Bottle-feeding",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "birthFormulaType",
+                label: "What type of formula(s) were you fed?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthSolidFoodAge",
+                label: "The age you were when introduced to solid food:",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthWheatAge",
+                label: "The age you were when introduced to wheat:",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthDairyAge",
+                label: "The age you were when introduced to dairy:",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthAvoidedFoods",
+                label:
+                  "If there were there any foods that were avoided because they gave you symptoms when you were a child, please list the food and the related symptoms.",
+                type: "textarea",
+                placeholder: "Example: milk = gas/diarrhea",
+              },
+              {
+                name: "birthSugarChild",
+                label: "Did you eat a lot of sugar or candy as a child?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "History - Patient Dental",
+            layout: "stacked",
+            fields: [
+              {
+                name: "dentalMercuryFillings",
+                label: "Do you have Silver Mercury fillings?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalMercuryFillingsCount",
+                label: "How many Silver Mercury fillings do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalGoldFillings",
+                label: "Do you have Gold fillings?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalGoldFillingsCount",
+                label: "How many Gold fillings do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalRootCanals",
+                label: "Do you have Root Canals?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalRootCanalsCount",
+                label: "How many Root Canals do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalImplants",
+                label: "Do you have Dental Implants?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalImplantsCount",
+                label: "How many Implants do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalCapsCrowns",
+                label: "Do you have Caps/Crowns?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalCapsCrownsCount",
+                label: "How many Caps/Crowns do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalToothPain",
+                label: "Do you have Tooth pain?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalToothPainCount",
+                label: "How many teeth cause pain?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalBleedingGums",
+                label: "Do you have Bleeding gums?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalGumsBleedAmount",
+                label: "How much of your Gums Bleed?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalGingivitis",
+                label: "Do you have Gingivitis?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalChewingProblems",
+                label: "Do you have Problems with chewing?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalChewingProblemsCount",
+                label: "How many teeth cause Problems with chewing?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalOtherConcerns",
+                label: "Other Dental concerns, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalMercuryRemoved",
+                label: "Have you had any Mercury fillings removed?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalMercuryRemovedDate",
+                label: "Approximate Date your Mercury fillings were removed",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalFillingsChild",
+                label: "Did you have Fillings as a child?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalFillingsChildCount",
+                label: "How many Fillings did you have as a child?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalBrushRegularly",
+                label: "Do you Brush regularly?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalFlossRegularly",
+                label: "Do you Floss regularly?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "Male Reproductive",
+            layout: "stacked",
+            fields: [
+              {
+                name: "maleTesticularPain",
+                label: "Have you had a Testicular pain?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleProstateEnlargement",
+                label: "Have you had a Prostate enlargement?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleSexDriveChange",
+                label: "Have you had a change in sex drive?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleImpotence",
+                label: "Have you had Impotence?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "malePrematureEjaculation",
+                label: "Have you had Premature ejaculation?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleDifficultyObtaining",
+                label: "Have you had Difficulty obtaining an erection?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleDifficultyMaintaining",
+                label: "Have you had Difficulty maintaining an erection?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleUrinaryChanges",
+                label: "Have you had Difficulty with urinary urgency/hesitancy/change in stream?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleVasectomy",
+                label: "Have you had a Vasectomy?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleNocturia",
+                label: "Have you had Difficulty with Nocturia (urination at night)?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleNocturiaTimes",
+                label: "Nocturia (urination at night) How many times per night?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "maleStd",
+                label: "Sexually transmitted diseases?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleStdDescribe",
+                label: "Describe the Sexually transmitted diseases",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              { name: "maleStdDate", label: "Date", type: "text", placeholder: "Date" },
+              { name: "maleStdEvent", label: "Event", type: "text", placeholder: "Event" },
+              {
+                name: "maleStdDescription",
+                label: "Description",
+                type: "textarea",
+                placeholder: "Description",
+              },
+              {
+                name: "malePsaTest",
+                label: "Have you had a PSA Test?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "maleLastPsa",
+                label: "Your Last PSA Test?",
+                type: "text",
+                placeholder: "Response",
+              },
+              { name: "malePsaDate", label: "Date", type: "text", placeholder: "Date" },
+              { name: "malePsaEvent", label: "Event", type: "text", placeholder: "Event" },
+              {
+                name: "malePsaDescription",
+                label: "Description",
+                type: "textarea",
+                placeholder: "Description",
+              },
+              { name: "malePsaLevel", label: "PSA Level?", type: "text", placeholder: "Response" },
+              {
+                name: "maleOtherProcedures",
+                label: "Other Test / Procedures",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+            ],
+          },
+          {
+            title: "History - Patient Environmental/Detoxification",
+            layout: "stacked",
+            fields: [
+              {
+                name: "envCigaretteSmoke",
+                label: "Does Cigarette Smoke Significantly affect you?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envPerfumes",
+                label: "Do Perfumes/Colognes (or laundry soap/softener) Significantly affect you?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envAutoExhaust",
+                label: "Does Auto exhaust fumes Significantly affect you?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOtherSignificant",
+                label: "If there are Other things that Significantly affect you, Please list",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "envMold",
+                label: "In your work and/or home environment are you regularly exposed to: Mold",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envWaterLeaks",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Water leaks",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envRenovations",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Renovations",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Chemicals",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envEmf",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Electromagnetic radiation",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envDamp",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Damp environments",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envCarpets",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Carpets or rugs",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOldPaint",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Old paint",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envStagnantAir",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Stagnant or stuffy air",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envSmokers",
+                label: "In your work and/or home environment are you regularly exposed to: Smokers",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envPesticides",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Pesticides",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envHerbicides",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Herbicides",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envHarshChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Harsh chemicals (solvents, glue, gas, acids, etc)",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envCleaningChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Cleaning chemicals",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envHeavyMetals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Heavy metals (lead, mercury, etc.)",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envPaints",
+                label: "In your work and/or home environment are you regularly exposed to: Paints",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envAirTravel",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Air travel",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOtherChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to any OTHER type of chemicals/toxins",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOtherChemicalsExplain",
+                label:
+                  "Please explain how/when you are exposed to any OTHER chemicals/toxins at work and/or at home environment?",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "envSignificantExposure",
+                label: "Have you had Significant exposure to any harmful Chemicals?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envSignificantExposureDetails",
+                label:
+                  "If you have had Significant exposure to any harmful Chemicals please give Date / Event / Description and Length of exposure",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "envPets",
+                label: "If you have Pets or Farm animals do they",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Family",
+            layout: "stacked",
+            fields: [
+              {
+                name: "familyCancer",
+                label:
+                  "Does the following member(s) currently or in the past have had Cancer (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyCancerDetails",
+                label:
+                  "For the above family member who have/had Cancer please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyHeartDisease",
+                label:
+                  "Does the following member(s) currently or in the past have had Heart disease (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyHeartDiseaseDetails",
+                label:
+                  "For the above family member who have/had Heart disease please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyHypertension",
+                label:
+                  "Does the following member(s) currently or in the past have had Hypertension (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyHypertensionDetails",
+                label:
+                  "For the above family member who have/had Hypertension please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyObesity",
+                label:
+                  "Does the following member(s) currently or in the past have had Obesity (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyObesityDetails",
+                label:
+                  "For the above family member who have/had Obesity please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyDiabetes",
+                label:
+                  "Does the following member(s) currently or in the past have had Diabetes (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyDiabetesDetails",
+                label:
+                  "For the above family member who have/had Diabetes please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyStroke",
+                label:
+                  "Does the following member(s) currently or in the past have had Stroke (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyStrokeDetails",
+                label:
+                  "For the above family member who have/had Stroke please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAutoimmune",
+                label:
+                  "Does the following member(s) currently or in the past have had Autoimmune disease (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAutoimmuneDetails",
+                label:
+                  "For the above family member who have/had Autoimmune disease please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyArthritis",
+                label:
+                  "Does the following member(s) currently or in the past have had Arthritis (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyArthritisDetails",
+                label:
+                  "For the above family member who have/had Arthritis please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyKidneyDisease",
+                label:
+                  "Does the following member(s) currently or in the past have had Kidney disease (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyKidneyDiseaseDetails",
+                label:
+                  "For the above family member who have/had Kidney disease please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyThyroidProblems",
+                label:
+                  "Does the following member(s) currently or in the past have had Thyroid problems (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyThyroidProblemsDetails",
+                label:
+                  "For the above family member who have/had Thyroid problems please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familySeizures",
+                label:
+                  "Does the following member(s) currently or in the past have had Seizures/Epllepsy (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familySeizuresDetails",
+                label:
+                  "For the above family member who have/had Seizures/Epllepsy please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyPsychiatric",
+                label:
+                  "Does the following member(s) currently or in the past have had Psychiatric disorders (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyPsychiatricDetails",
+                label:
+                  "For the above family member who have/had Psychiatric disorders please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAnxiety",
+                label:
+                  "Does the following member(s) currently or in the past have had Anxiety (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAnxietyDetails",
+                label:
+                  "For the above family member who have/had Anxiety please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyDepression",
+                label:
+                  "Does the following member(s) currently or in the past have had Depression (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyDepressionDetails",
+                label:
+                  "For the above family member who have/had Depression please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAsthma",
+                label:
+                  "Does the following member(s) currently or in the past have had Asthma (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAsthmaDetails",
+                label:
+                  "For the above family member who have/had Asthma please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyEczema",
+                label:
+                  "Does the following member(s) currently or in the past have had Eczema (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyEczemaDetails",
+                label:
+                  "For the above family member who have/had Eczema please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAdhd",
+                label:
+                  "Does the following member(s) currently or in the past have had ADHD (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAdhdDetails",
+                label:
+                  "For the above family member who have/had ADHD please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAutism",
+                label:
+                  "Does the following member(s) currently or in the past have had Autism (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAutismDetails",
+                label:
+                  "For the above family member who have/had Autism please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyIbs",
+                label:
+                  "Does the following member(s) currently or in the past have had Irritable Bowel Syndrome (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyIbsDetails",
+                label:
+                  "For the above family member who have/had Irritable Bowel Syndrome please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyDementia",
+                label:
+                  "Does the following member(s) currently or in the past have had Dementia (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyDementiaDetails",
+                label:
+                  "For the above family member who have/had Dementia please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familySubstanceUse",
+                label:
+                  "Does the following member(s) currently or in the past have had Substance Use Disorder (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familySubstanceUseDetails",
+                label:
+                  "For the above family member who have/had Substance Use Disorder please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyGeneticDisorders",
+                label:
+                  "Does the following member(s) currently or in the past have had Genetic disorder(s) (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyGeneticDisordersDetails",
+                label:
+                  "For the above family member who have/had Genetic disorders please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyOther",
+                label:
+                  "Does the following member(s) currently or in the past have had Other (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyOtherDetails",
+                label:
+                  "For the above family member who have/had Other please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Gastrointestinal)",
+            description:
+              "Select YES if you CURRENTLY have the condition. Select PAST if you have had it in the past.",
+            layout: "stacked",
+            fields: [
+              {
+                name: "giIrritableBowel",
+                label: "IRRITABLE BOWEL",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giGerd",
+                label: "GERD (reflux)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giCrohns",
+                label: "CROHN'S DISEASE/ULCERATIVE COLITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giPepticUlcer",
+                label: "PEPTIC ULCER DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giCeliac",
+                label: "CELIAC DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giGallstones",
+                label: "GALLSTONES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giOtherExplain",
+                label: "If you have OTHER: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Respiratory)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "respAsthma",
+                label: "ASTHMA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respEmphysema",
+                label: "EMPHYSEMA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respPneumonia",
+                label: "PNEUMONIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respSinusitis",
+                label: "SINUSITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respSleepApnea",
+                label: "SLEEP APNEA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respOtherExplain",
+                label: "If you have OTHER Respiratory Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Urinary/Genital)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "urinaryKidneyStones",
+                label: "KIDNEY STONES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryGout",
+                label: "GOUT",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryInterstitialCystitis",
+                label: "INTERSTITIAL CYSTITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryYeastInfections",
+                label: "FREQUENT YEAST INFECTIONS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryUti",
+                label: "FREQUENT URINARY TRACT INFECTIONS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryDysfunction",
+                label: "SEXUAL DYSFUNCTION",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryStd",
+                label: "SEXUALLY TRANSMITTED DISEASES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryOtherExplain",
+                label: "If you have OTHER Urinary or Genital Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Endocrine/Metabolic)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "endoDiabetes",
+                label: "DIABETES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoHypothyroid",
+                label: "HYPOTHYROIDISM (Low Thyroid)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoHyperthyroid",
+                label: "HYPERTHYROIDISM (overactive thyroid)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoPcos",
+                label: "POLYCYSTIC OVARIAN SYNDROME (PCOS)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoInfertility",
+                label: "INFERTILITY",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoMetabolicSyndrome",
+                label: "METABOLIC SYNDROME/INSULIN RESISTANCE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoEatingDisorder",
+                label: "EATING DISORDER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoHypoglycemia",
+                label: "HYPOGLYCEMIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoOtherExplain",
+                label: "If you have OTHER Endocrine or Metabolic Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Inflammatory/Immune)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "immuneRheumatoid",
+                label: "RHEUMATOID ARTHRITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneChronicFatigue",
+                label: "CHRONIC FATIGUE SYNDROME",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneFoodAllergies",
+                label: "FOOD ALLERGIES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneEnvironmentalAllergies",
+                label: "ENVIRONMENTAL ALLERGIES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneChemicalSensitivity",
+                label: "MULTIPLE CHEMICAL SENSITIVITIES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneAutoimmune",
+                label: "AUTOIMMUNE DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneDeficiency",
+                label: "IMMUNE DEFICIENCY",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneMono",
+                label: "MONONUCLEOSIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneHepatitis",
+                label: "HEPATITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneOtherExplain",
+                label: "If you have OTHER Immune or Inflammatory Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Musculoskeletal)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "msFibromyalgia",
+                label: "FIBROMYALGIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msOsteoarthritis",
+                label: "OSTEOARTHRITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msChronicPain",
+                label: "CHRONIC PAIN",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msOtherExplain",
+                label: "If you have OTHER Musculoskeletal Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Skin)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "skinEczema",
+                label: "ECZEMA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinPsoriasis",
+                label: "PSORIASIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinAcne",
+                label: "ACNE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinCancer",
+                label: "SKIN CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinOtherExplain",
+                label: "If you have OTHER Skin Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Cardiovascular)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "cardioAngina",
+                label: "ANGINA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHeartAttack",
+                label: "HEART ATTACK",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHeartFailure",
+                label: "HEART FAILURE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHypertension",
+                label: "HYPERTENSION (high blood pressure)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioStroke",
+                label: "STROKE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHighBloodFats",
+                label: "HIGH BLOOD FATS (cholesterol, triglycerides)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioRheumaticFever",
+                label: "RHEUMATIC FEVER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioArrythmia",
+                label: "ARRYTHMIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioMurmur",
+                label: "MURMUR",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioMitralValve",
+                label: "MITRAL VALVE PROLAPSE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioOtherExplain",
+                label: "If you have OTHER Cardiovascular Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Neurologic/Emotional)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "neuroSeizures",
+                label: "EPILEPSY / SEIZURES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroAddAdhd",
+                label: "ADD/ADHD",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroHeadaches",
+                label: "HEADACHES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroMigraine",
+                label: "MIGRAINE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroDepression",
+                label: "DEPRESSION",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroAnxiety",
+                label: "ANXIETY",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroAutism",
+                label: "AUTISM",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroMultipleSclerosis",
+                label: "MULTIPLE SCLEROSIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroParkinsons",
+                label: "PARKINSON'S DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroDementia",
+                label: "DEMENTIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroOtherExplain",
+                label: "If you have OTHER Neurological Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Cancer)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "cancerLung",
+                label: "LUNG CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerBreast",
+                label: "BREAST CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerColon",
+                label: "COLON CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerOvarian",
+                label: "OVARIAN CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerSkin",
+                label: "SKIN CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerOtherExplain",
+                label: "If you have OTHER Cancer: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Diagnostic Studies",
+            layout: "stacked",
+            fields: [
+              {
+                name: "studyBoneDensity",
+                label: "BONE DENSITY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyCtScan",
+                label: "CT SCAN - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyColonoscopy",
+                label: "COLONOSCOPY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyCardiacStress",
+                label: "CARDIAC STRESS TEST - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyEkg",
+                label: "EKG - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyMri",
+                label: "MRI - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyUpperEndoscopy",
+                label: "UPPER ENDOSCOPY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyUpperGiSeries",
+                label: "UPPER GI SERIES - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyChestXray",
+                label: "CHEST X-RAY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyOtherXrays",
+                label: "OTHER X-RAYS - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyBariumEnema",
+                label: "BARIUM ENEMA - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "studyOther",
+                label: "OTHER - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+            ],
+          },
+          {
+            title: "History - Surgeries & Hospitalizations",
+            description:
+              "Provide an approximate DATE, EVENT TITLE, and DESCRIPTION for each item that applies. Leave blank if not applicable.",
+            layout: "stacked",
+            fields: [
+              {
+                name: "surgeryAppendectomy",
+                label: "APPENDECTOMY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryDental",
+                label: "DENTAL SURGERIES - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryGallbladder",
+                label: "GALLBLADDER - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryHernia",
+                label: "HERNIA - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryHysterectomy",
+                label: "HYSTERECTOMY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryTonsillectomy",
+                label: "TONSILLECTOMY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryJointReplacement",
+                label: "JOINT REPLACEMENT - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryHeart",
+                label: "HEART SURGERY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "surgeryOther",
+                label: "OTHER SURGERIES - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "hospitalizations",
+                label: "Hospitalizations - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "injuryBrokenBones",
+                label: "BROKEN BONE(S) - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "injuryBack",
+                label: "BACK INJURY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "injuryNeck",
+                label: "NECK INJURY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "injuryHead",
+                label: "HEAD INJURY - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "injuryOther",
+                label: "OTHER INJURIES - Date / Event / Description",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+            ],
+          },
+          {
+            title: "Allergies",
+            layout: "stacked",
+            fields: [
+              {
+                name: "allergiesList",
+                label: "List any allergies and include the name of Medication/Supplement or Food",
+                type: "textarea",
+                placeholder: "Allergies",
+              },
+            ],
+          },
+          {
+            title: "Lifestyle Review - Sleep",
+            layout: "stacked",
+            fields: [
+              {
+                name: "sleepHours",
+                label: "How many hours of sleep do you get each night on average?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "sleepFallingAsleep",
+                label: "Do you have have problems falling asleep?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "sleepInsomnia",
+                label: "Do you have problems with insomnia?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "sleepRested",
+                label: "Do you feel rested upon awakening?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "sleepStayingAsleep",
+                label: "Do you have problems staying asleep?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "sleepSnore",
+                label: "Do you snore?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "sleepAids",
+                label: "Do you use sleeping aids?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "sleepAidsExplain",
+                label: "If you use Sleep Aids please explain.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Lifestyle Review - Exercise",
+            layout: "stacked",
+            fields: [
+              {
+                name: "exerciseCardio",
+                label:
+                  "Current exercise program - Cardio/Aerobic (Type / Times per week / Duration)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "exerciseStrength",
+                label:
+                  "Current exercise program - Strength/Resistance (Type / Times per week / Duration)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "exerciseFlexibility",
+                label:
+                  "Current exercise program - Flexibility/Stretching (Type / Times per week / Duration)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "exerciseBalance",
+                label: "Current exercise program - Balance (Type / Times per week / Duration)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "exerciseSports",
+                label:
+                  "Current exercise program - Sports/Leisure (e.g., golf) (Type / Times per week / Duration)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "exerciseOther",
+                label: "Current exercise program - Other (Type / Times per week / Duration)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "exerciseMotivation",
+                label: "Do you feel motivated to exercise?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "exerciseLimitations",
+                label: "Are there any problems that limit exercise?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "exerciseLimitationsExplain",
+                label: "Please Explain problems that limit exercise",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "exerciseFatigue",
+                label: "Do you feel unusually fatigued or sore after exercise?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "exerciseFatigueExplain",
+                label: "Please Explain your feeling unusually fatigued or sore after exercise",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Lifestyle Review - Nutrition",
+            layout: "stacked",
+            fields: [
+              {
+                name: "nutritionSpecialDiets",
+                label:
+                  "Please indicate if you currently follow any special diets or nutritional programs (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "nutritionSpecialDietsOther",
+                label: "If Other, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionSensitivities",
+                label: "Do you have Sensitivities to certain foods?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "nutritionSensitivitiesList",
+                label: "List your Food Sensitivities",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionAversions",
+                label: "Do you have Aversions to certain Foods?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "nutritionAversionsExplain",
+                label: "Explain the Aversions to the certain Foods",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionAdverseReactions",
+                label: "Do you adversely react to (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "nutritionAdverseReactionsOther",
+                label: "Please list Other foods you adversely react to:",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionCravings",
+                label: "Are there any foods that you crave or binge on?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "nutritionCravingsList",
+                label: "Please List any foods that you crave or binge on",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionThreeMeals",
+                label: "Do you eat 3 meals a day?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "nutritionSkippingMeal",
+                label: "Does skipping a meal greatly affect you?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "nutritionMealsOut",
+                label: "How many meals do you eat out per week?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionLifestyleFactors",
+                label: "Do any of these factor apply to your current lifestyle and eating habits?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionBreakfast",
+                label: "Typical day - Breakfast",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionLunch",
+                label: "Typical day - Lunch",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionDinner",
+                label: "Typical day - Dinner",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionSnacks",
+                label: "Typical day - Snacks",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionFluids",
+                label: "Typical day - Fluids",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionFruits",
+                label: "Servings per week of Fruits (not juice)",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionLegumes",
+                label: "Servings per week of Legumes (beans, peas, etc)",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionDairy",
+                label: "Servings per week of Dairy/Alternatives",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionSoda",
+                label: "Servings per week of Cans of soda (regular or diet)",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionVegetables",
+                label: "Servings per week of Vegetables (not including white potatoes)",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionRedMeat",
+                label: "Servings per week of Red meat",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionFish",
+                label: "Servings per week of Fish",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionNutsSeeds",
+                label: "Servings per week of Nuts & Seeds",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionFatsOils",
+                label: "Servings per week of Fats & Oils",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionSweets",
+                label: "Servings per week of Sweets (candy, cookies, cake, ice cream, etc.)",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionCoffee",
+                label: "Amount of COFFEE per day",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionTea",
+                label: "Amount of TEA per day",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionCaffeinatedSoda",
+                label: "Amount of Caffeinated sodas per day",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionCaffeineReactions",
+                label: "If you have adverse reactions to caffeine, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionCaffeineEffects",
+                label: "When you drink caffeine, do you feel",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Smoking",
+            layout: "stacked",
+            fields: [
+              {
+                name: "smokingCurrent",
+                label: "Do you CURRENTLY Smoke?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "smokingPacksPerDay",
+                label: "How many packs a day?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "smokingYears",
+                label: "The number of years you have smoked?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "smokingProducts",
+                label: "Check all products you have smoked?",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "smokingQuitAttempt",
+                label: "Have attempted to quit?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "smokingQuitMethods",
+                label: "What method(s) have you used to quit?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "smokingFormerPacks",
+                label: "How many PACKS per day did you used to smoke?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "smokingFormerYears",
+                label: "How many YEARS did you smoke?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "smokingSecondhand",
+                label: "Are you regularly exposed to second hand smoke?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "Alcohol",
+            layout: "stacked",
+            fields: [
+              {
+                name: "alcoholUse",
+                label: "Do you ever drink alcohol?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "alcoholDrinksPerWeek",
+                label: "How many alcoholic beverages do you drink in a week?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "alcoholPreviousIntake",
+                label: "What is your previous alcohol intake?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "alcoholPastProblem",
+                label: "If you've had a problem with alcohol in the past, when was it?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "alcoholPastProblemExplain",
+                label: "If you've had a problem with alcohol in the past, please explain.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "alcoholHelp",
+                label: "Have you ever thought about getting help to control or stop your drinking?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "Other Substances",
+            layout: "stacked",
+            fields: [
+              {
+                name: "substancesCurrent",
+                label: "Do you currently use recreational drugs?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "substancesTypes",
+                label: "What type of recreational drugs do you currently use?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "substancesIvInhaled",
+                label: "Have you ever used IV or inhaled recreational drugs?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "Stress",
+            layout: "stacked",
+            fields: [
+              {
+                name: "stressExcessive",
+                label: "Do you feel you have an excessive amount of stress in your life?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "stressHandle",
+                label: "Do you feel you can easily handle the stress in your life?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "stressWork",
+                label: "On a scale of 1-10, how much stress does WORK cause you?",
+                type: "select",
+                options: ["Select", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "stressFamily",
+                label: "On a scale of 1-10, how much stress does FAMILY cause you?",
+                type: "select",
+                options: ["Select", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "stressSocial",
+                label: "On a scale of 1-10, how much stress does SOCIAL cause you?",
+                type: "select",
+                options: ["Select", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "stressFinances",
+                label: "On a scale of 1-10, how much stress does FINANCES cause you?",
+                type: "select",
+                options: ["Select", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "stressHealth",
+                label: "On a scale of 1-10, how much stress does HEALTH cause you?",
+                type: "select",
+                options: ["Select", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "stressOther",
+                label: "On a scale of 1-10, how much stress does OTHER cause you?",
+                type: "select",
+                options: ["Select", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "stressRelaxationFrequency",
+                label: "If you use relaxation techniques, how often?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "stressRelaxationTechniques",
+                label: "Which relaxation techniques do you use? (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "stressCounseling",
+                label: "Have you sought counseling?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "stressTherapyDescribe",
+                label: "If you are currently in therapy, please describe.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "stressTrauma",
+                label:
+                  "Have you ever been abused, a victim of crime, or experienced a significant trauma?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "stressHobbies",
+                label: "What are your hobbies or leisure activities?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Relationships",
+            layout: "stacked",
+            fields: [
+              {
+                name: "relationshipStatus",
+                label: "Marital status",
+                type: "select",
+                options: [
+                  "Select",
+                  "Single",
+                  "Partnered",
+                  "Married",
+                  "Separated",
+                  "Divorced",
+                  "Widowed",
+                ],
+              },
+              {
+                name: "relationshipHousehold",
+                label:
+                  "With whom do you live? (Include children, parents, relatives friends, pets)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "relationshipPreviousOccupation",
+                label: "Your Previous occupation",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "relationshipSupportResources",
+                label: "If you have resources for emotional support check all that apply",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "relationshipSupportOther",
+                label: "Do you have emotional support other than listed",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "relationshipSupportOtherExplain",
+                label: "If you have emotional support other than listed, please explain.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "relationshipSpiritualPractice",
+                label: "What kind of religious or spiritual practice, if any, do you have?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Well-being Ratings",
+            description: "Rate each area on a scale of 1-10, or NA if not applicable.",
+            layout: "stacked",
+            fields: [
+              {
+                name: "wellbeingOverall",
+                label: "OVERALL",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingSchool",
+                label: "AT SCHOOL",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingJob",
+                label: "With your JOB",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingSocial",
+                label: "In your SOCIAL LIFE",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingFriends",
+                label: "With close FRIENDS",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingSex",
+                label: "With SEX",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingAttitude",
+                label: "With your ATTITUDE",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingPartner",
+                label: "With your PARTNER",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingChildren",
+                label: "With your CHILDREN",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingParents",
+                label: "With your PARENTS",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingSpouse",
+                label: "With your SPOUSE",
+                type: "select",
+                options: ["Select", "NA", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+            ],
+          },
+          {
+            title: "Symptoms Review",
+            description:
+              "Select any symptom that applies today or in the past 6 months. You can list more than one symptom per category.",
+            layout: "stacked",
+            fields: [
+              {
+                name: "symptomsGeneral",
+                label: "General Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsHeadEyesEars",
+                label: "Head, Eyes, and Ear Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsMusculoskeletal",
+                label: "Musculoskeletal Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsMoodNerve",
+                label: "Mood/Nerve Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsCardiovascular",
+                label: "Cardiovascular Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsUrinary",
+                label: "Urinary Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsDigestion",
+                label: "Digestion Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsEating",
+                label: "Eating Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsRespiratory",
+                label: "Respiratory Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsNails",
+                label: "Nail Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsLymph",
+                label: "Lymph Node Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsSkinDryness",
+                label: "Skin, Dryness Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsSkinProblems",
+                label: "Skin Problems (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsItchingSkin",
+                label: "Itching Skin Symptoms (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "symptomsMaleReproductive",
+                label: "Male Reproductive (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+            ],
+          },
+          {
+            title: "Medications / Supplements",
+            layout: "stacked",
+            fields: [
+              {
+                name: "medsPrescriptions",
+                label: "List All CURRENT Prescriptions (Name / Dose / Date Started / Reason)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "medsOverTheCounter",
+                label:
+                  "List All CURRENT Over-the-Counter Meds (Name / Dose / Date Started / Reason)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "medsSupplements",
+                label:
+                  "List All CURRENT Supplements (Vitamins / Minerals / Herbs) (Name / Dose / Date Started / Reason)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "medsSideEffects",
+                label:
+                  "Have medications or supplements ever caused unusual side effects or problems?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "medsSideEffectsExplain",
+                label:
+                  "Please describe any prescriptions, supplements or over-the-counter medications that have ever caused unusual side effects or problems",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "medsLongTermNsaids",
+                label:
+                  "Have you used NSAIDs (Advil, Aleve, Motrin, Aspirin) regularly or long-term?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "medsLongTermTylenol",
+                label: "Have you used Tylenol (acetaminophen) regularly or long-term?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "medsLongTermAcidBlockers",
+                label:
+                  "Have you used acid-blocking drugs (Zantac, Prilosec, Nexium etc.) regularly or long-term?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "Antibiotics & Steroids History",
+            layout: "stacked",
+            fields: [
+              {
+                name: "antibioticsInfancyCount",
+                label: "How many times have you taken antibiotics in Infancy/Childhood?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "antibioticsInfancyReason",
+                label: "For what reason did you take antibiotics in Infancy/Childhood?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "antibioticsTeenCount",
+                label: "How many times have you taken antibiotics as a Teen?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "antibioticsTeenReason",
+                label: "For what reason have you taken antibiotics as a Teen?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "antibioticsAdultCount",
+                label: "How many times have you taken antibiotics as an Adult?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "antibioticsAdultReason",
+                label: "For what reason have you taken antibiotics as an Adult?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "steroidsInfancyCount",
+                label: "How often have you taken oral steroids in Infancy/Childhood?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "steroidsInfancyReason",
+                label: "For what reason have you taken oral steroids in Infancy/Childhood?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "steroidsTeenCount",
+                label: "How often have you taken oral steroids as a Teen?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "steroidsTeenReason",
+                label: "For what reason have you taken oral steroids as a Teen?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "steroidsAdultCount",
+                label: "How often have you taken oral steroids as an Adult?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "steroidsAdultReason",
+                label: "For what reason have you taken oral steroids as an Adult?",
+                type: "textarea",
+                placeholder: "Response",
               },
             ],
           },
@@ -4972,28 +7578,23 @@ export const assessmentsContent: AssessmentsPageContent = {
         fieldSections: [
           {
             title: "General Information",
+            layout: "stacked",
             fields: [
               {
-                name: "assignedTo",
-                label: "Assigned to",
-                type: "text",
-                placeholder: "Assigned to",
-              },
-              {
                 name: "dateOfBirth",
-                label: "Date of Birth",
+                label: "Date of Birth (Required)",
                 type: "date",
                 placeholder: "Choose Date of Birth",
               },
               {
                 name: "age",
-                label: "Age",
+                label: "Age (Required)",
                 type: "number",
                 placeholder: "Age",
               },
               {
                 name: "primaryAddress",
-                label: "Primary Address",
+                label: "What is your primary address?",
                 type: "text",
                 placeholder: "Street Address",
               },
@@ -5010,10 +7611,22 @@ export const assessmentsContent: AssessmentsPageContent = {
                 placeholder: "City",
               },
               {
+                name: "state",
+                label: "State",
+                type: "text",
+                placeholder: "State",
+              },
+              {
                 name: "zipCode",
                 label: "Zip Code",
                 type: "text",
                 placeholder: "Zip Code",
+              },
+              {
+                name: "country",
+                label: "Country",
+                type: "text",
+                placeholder: "Country",
               },
               {
                 name: "primaryPhoneCountry",
@@ -5031,19 +7644,19 @@ export const assessmentsContent: AssessmentsPageContent = {
                 name: "phoneOther",
                 label: "Phone (Other)",
                 type: "tel",
-                placeholder: "Phone (Other)",
+                placeholder: "Response",
               },
               {
                 name: "phoneWork",
                 label: "Phone (Work)",
                 type: "tel",
-                placeholder: "Phone (Work)",
+                placeholder: "Response",
               },
               {
                 name: "geneticBackground",
-                label: "Genetic Background",
-                type: "text",
-                placeholder: "Response",
+                label: "Genetic Background (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
               },
               {
                 name: "lastMedicalCare",
@@ -5087,12 +7700,2467 @@ export const assessmentsContent: AssessmentsPageContent = {
             title: "Current Health Concerns",
             description:
               "Please list CURRENT and ONGOING health complaints in order of priority. After each response, press Enter to add the next health complaint.",
+            layout: "stacked",
             fields: [
               {
                 name: "currentHealthConcerns",
-                label: "Current Health Concerns",
+                label: "Complaints",
                 type: "textarea",
                 placeholder: "List your health complaints",
+              },
+            ],
+          },
+          {
+            title: "Readiness Assessment",
+            description:
+              "Rate your willingness to change on a scale of 0-5, where 5 = Very Willing and 0 = Not Willing.",
+            layout: "stacked",
+            fields: [
+              {
+                name: "readinessDiet",
+                label: "Significantly modify your diet",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessSupplements",
+                label: "Take several nutritional supplements each day",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessFoodLog",
+                label: "Keep a record of everything you eat each day",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessLifestyle",
+                label: "Modify your lifestyle (e.g., work demands, sleep habits)",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessRelaxation",
+                label: "Practice a relaxation technique",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessExercise",
+                label: "Engage in regular exercise",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessConfidence",
+                label:
+                  "How confident are you in your ability to organize and follow through on the above-mentioned health-related activities?",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessConfidenceNotes",
+                label:
+                  "If you are Not confident, what aspects of yourself or your life lead you to question your capacity to follow through?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "readinessHouseholdSupport",
+                label:
+                  "At the present time, how supportive do you think the people in your household will be to your implementing the above changes?",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+              {
+                name: "readinessStaffSupport",
+                label:
+                  "How much ongoing support (e.g., correspondence, coaching) from our staff would be helpful to you as you implement your personal health program?",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5"],
+              },
+            ],
+          },
+          {
+            title: "Health Goals",
+            layout: "stacked",
+            fields: [
+              {
+                name: "goalVisit",
+                label: "What do you hope to achieve in your visit with us?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalLastWell",
+                label: "When was the last time you felt well?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalTriggerChange",
+                label: "Did something trigger your change in health?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalFeelBetter",
+                label: "What makes you feel better?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalFeelWorse",
+                label: "What makes you feel worse?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalConditionAffects",
+                label: "How does your condition affect you?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalWhatHappening",
+                label: "What do you think is happening and why?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "goalNeedsToHappen",
+                label: "What do you feel needs to happen for you to get better?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Patient Birth",
+            layout: "stacked",
+            fields: [
+              {
+                name: "birthBorn",
+                label: "You were born:",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthComplications",
+                label: "Were there any Pregnancy or Birth Complications?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "birthComplicationsExplain",
+                label: "Please explain any Pregnancy or Birth Complications.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "birthBreastfed",
+                label: "Were you breastfed?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "birthBreastfedHowLong",
+                label: "How long were you breastfed?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthKnowFormula",
+                label: "I know what type of formula was used for Bottle-feeding",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "birthFormulaType",
+                label: "What type of formula(s) were you fed?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthSolidFoodAge",
+                label: "The age you were when introduced to solid food:",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthWheatAge",
+                label: "The age you were when introduced to wheat:",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthDairyAge",
+                label: "The age you were when introduced to dairy:",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "birthAvoidedFoods",
+                label:
+                  "If there were any foods that were avoided because they gave you symptoms when you were a child, please list the food and the related symptoms.",
+                type: "textarea",
+                placeholder: "Example: milk = gas/diarrhea",
+              },
+              {
+                name: "birthSugarChild",
+                label: "Did you eat a lot of sugar or candy as a child?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "History - Patient Dental",
+            layout: "stacked",
+            fields: [
+              {
+                name: "dentalMercuryFillings",
+                label: "Do you have Silver Mercury fillings?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalMercuryFillingsCount",
+                label: "How many Silver Mercury fillings do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalGoldFillings",
+                label: "Do you have Gold fillings?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalGoldFillingsCount",
+                label: "How many Gold fillings do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalRootCanals",
+                label: "Do you have Root Canals?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalRootCanalsCount",
+                label: "How many Root Canals do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalImplants",
+                label: "Do you have Dental Implants?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalImplantsCount",
+                label: "How many Implants do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalCapsCrowns",
+                label: "Do you have Caps/Crowns?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalCapsCrownsCount",
+                label: "How many Caps/Crowns do you have?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalToothPain",
+                label: "Do you have Tooth pain?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalToothPainCount",
+                label: "How many teeth cause pain?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalBleedingGums",
+                label: "Do you have Bleeding gums?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalGumsBleedAmount",
+                label: "How much of your Gums Bleed?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalGingivitis",
+                label: "Do you have Gingivitis?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalChewingProblems",
+                label: "Do you have Problems with chewing?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalChewingProblemsCount",
+                label: "How many teeth cause Problems with chewing?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalOtherConcerns",
+                label: "Other Dental concerns, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalMercuryRemoved",
+                label: "Have you had any Mercury fillings removed?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalMercuryRemovedDate",
+                label: "Approximate Date your Mercury fillings were removed",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalFillingsChild",
+                label: "Did you have Fillings as a child?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalFillingsChildCount",
+                label: "How many Fillings did you have as a child?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "dentalBrushRegularly",
+                label: "Do you Brush regularly?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "dentalFlossRegularly",
+                label: "Do you Floss regularly?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+            ],
+          },
+          {
+            title: "Patient Women's Obstetric",
+            layout: "stacked",
+            fields: [
+              {
+                name: "obPregnancies",
+                label: "Have you had any Pregnancies?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obPregnanciesCount",
+                label: "How many Pregnancies have you had?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obMiscarriages",
+                label: "Have you had any Miscarriages?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obMiscarriagesCount",
+                label: "How many Miscarriages have you had?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obAbortions",
+                label: "Have you had an Abortion(s)?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obLivingChildren",
+                label: "Do you have Living children?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obLiveBirthsCount",
+                label: "How many Live Births have you had?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obVaginalDeliveries",
+                label: "Have you had Vaginal deliveries?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obVaginalDeliveriesCount",
+                label: "The number of Vaginal deliveries you have had.",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obCesareanDeliveries",
+                label: "Have you had Cesarean deliveries?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obCesareanDeliveriesCount",
+                label: "The number of Cesarean deliveries you have had.",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obTermBirths",
+                label: "Have you had Term births?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obTermBirthsCount",
+                label: "Number of Term births you have had?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obPrematureBirths",
+                label: "Have you had any Premature birth(s)?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "obPrematureBirthsCount",
+                label: "The number of Premature birth(s).",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obLargestBabyWeight",
+                label: "Birth weight of Largest baby?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obSmallestBabyWeight",
+                label: "Birth weight of Smallest baby?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "obPregnancyProblems",
+                label: "If you developed any problems IN or AFTER Pregnancy, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Patient Women's Menstrual",
+            layout: "stacked",
+            fields: [
+              {
+                name: "menstrualFirstPeriodAge",
+                label: "Age at First period",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualLastPeriodDate",
+                label: "Date of LAST menstrual period",
+                type: "date",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualCycleLength",
+                label: "Length of cycle",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualTimeBetween",
+                label: "Time between cycles",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualExperience",
+                label: "Did /Do you experience: (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "menstrualPremenstrualProblems",
+                label:
+                  "Have you ever had premenstrual problems with Bloating, Breast tenderness, Irritability, etc? Please explain.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualPremenstrualExplain",
+                label: "Please explain Bloating, Breast tenderness, Irritability, etc.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualHeavyIrregular",
+                label:
+                  "Have you ever had Heavy, Irregular, Spotting, Skipping, etc. (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "menstrualHeavyExplain",
+                label: "Please explain Heavy, Irregular, Spotting, Skipping, etc.",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualBirthControlPills",
+                label: "Have you used Birth Control Pills?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualBirthControlPillsDuration",
+                label: "Please indicate how long you have used Birth Control Pills",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualBirthControlPatch",
+                label: "Have used A Birth Control Patch?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualBirthControlPatchDuration",
+                label: "Please indicate how long you have used A Birth Control Patch",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualNuvaRing",
+                label: "Have you used a Nuva ring?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualNuvaRingDuration",
+                label: "Please indicate how long you have used a Nuva ring",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualHormonalProblems",
+                label: "Have you had problems with hormonal birth control",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualHormonalProblemsExplain",
+                label: "Please explain the problems with Hormonal Birth Control",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualOtherBirthControl",
+                label:
+                  "Please indicate What & How long you have used, if applicable, OTHER form of Birth Control",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualOtherContraception",
+                label: "Select all OTHER forms of Contraception that apply",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "menstrualMenopause",
+                label: "Are you in Menopause?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualMenopauseAge",
+                label: "Give your age at last period.",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualMenopauseSurgery",
+                label: "Was Menopause brought on by Surgery?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualMenopauseSurgeryExplain",
+                label: "Please explain surgery that brought on Menopause",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualHotFlashes",
+                label:
+                  "Do you currently have symptomatic problems due to Menopause with Hot flashes?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualMoodSwings",
+                label:
+                  "Do you currently have symptomatic problems due to Menopause with Mood swings?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualConcentration",
+                label:
+                  "Do you currently have symptomatic problems due to Menopause with Concentration / memory problems?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualHeadaches",
+                label:
+                  "Do you currently have symptomatic problems due to Menopause with Headaches?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualJointPain",
+                label: "Do you currently have symptomatic problems with Joint pain?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualVaginalDryness",
+                label: "Do you currently have symptomatic problems with Vaginal dryness?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualWeightGain",
+                label: "Do you currently have symptomatic problems with Weight gain?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualDecreasedLibido",
+                label: "Do you currently have symptomatic problems with Decreased libido?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualUrineControl",
+                label: "Do you currently have symptomatic problems with Loss of control of urine?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualHeartPalpitations",
+                label: "Do you currently have symptomatic problems with heart Palpitations?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualHrt",
+                label: "Are you on Hormone replacement therapy?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "menstrualHrtStart",
+                label:
+                  "When did you start hormone replacement therapy and for what reason (hot flashes, osteoporosis prevention, etc.)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "menstrualHrtDate",
+                label: "Date",
+                type: "text",
+                placeholder: "Date",
+              },
+              {
+                name: "menstrualHrtEvent",
+                label: "Event",
+                type: "text",
+                placeholder: "Event",
+              },
+              {
+                name: "menstrualHrtDescription",
+                label: "Description",
+                type: "textarea",
+                placeholder: "Description",
+              },
+            ],
+          },
+          {
+            title: "Patient Women's Gynecological",
+            layout: "stacked",
+            fields: [
+              {
+                name: "gynOtherSymptoms",
+                label: "Other Gynecological Symptoms Check ALL that apply (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "gynStd",
+                label: "Are/Were there any Sexually transmitted disease?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "gynStdDescribe",
+                label: "Describe any Sexually transmitted disease(s)",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "gynPapDate",
+                label: "Last Pap test Date",
+                type: "date",
+                placeholder: "Response",
+              },
+              {
+                name: "gynPapResults",
+                label: "Gynecological Screening/Procedure Results Last Pap test results",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "gynMammogramDate",
+                label: "Last Mammogram test date",
+                type: "date",
+                placeholder: "Response",
+              },
+              {
+                name: "gynMammogramResults",
+                label: "Last Mammogram Results",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "gynBoneDensity",
+                label: "Last Bone Density",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "gynBoneDensityDate",
+                label: "Bone Density test date",
+                type: "text",
+                placeholder: "Date",
+              },
+              {
+                name: "gynOtherProcedures",
+                label: "OTHER test/procedures (list type and dates)",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+            ],
+          },
+          {
+            title: "History - Patient Environmental/Detoxification",
+            layout: "stacked",
+            fields: [
+              {
+                name: "envCigaretteSmoke",
+                label: "Does Cigarette Smoke Significantly affect you?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envPerfumes",
+                label: "Do Perfumes/Colognes (or laundry soap/softener) Significantly affect you?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envAutoExhaust",
+                label: "Does Auto exhaust fumes Significantly affect you?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOtherSignificant",
+                label: "If there are Other things that Significantly affect you, Please list",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "envMold",
+                label: "In your work and/or home environment are you regularly exposed to: Mold",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envWaterLeaks",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Water leaks",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envRenovations",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Renovations",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Chemicals",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envEmf",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Electromagnetic radiation",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envDamp",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Damp environments",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envCarpets",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Carpets or rugs",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOldPaint",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Old paint",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envStagnantAir",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Stagnant or stuffy air",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envSmokers",
+                label: "In your work and/or home environment are you regularly exposed to: Smokers",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envPesticides",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Pesticides",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envHerbicides",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Herbicides",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envHarshChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Harsh chemicals (solvents, glue, gas, acids, etc)",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envCleaningChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Cleaning chemicals",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envHeavyMetals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Heavy metals (lead, mercury, etc.)",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envPaints",
+                label: "In your work and/or home environment are you regularly exposed to: Paints",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envAirTravel",
+                label:
+                  "In your work and/or home environment are you regularly exposed to: Air travel",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOtherChemicals",
+                label:
+                  "In your work and/or home environment are you regularly exposed to any OTHER type of chemicals/toxins",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envOtherChemicalsExplain",
+                label:
+                  "Please explain how/when you are exposed to any OTHER chemicals/toxins at work and/or at home environment?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "envSignificantExposure",
+                label: "Have you had Significant exposure to any harmful Chemicals?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "envSignificantExposureDetails",
+                label:
+                  "If you have had Significant exposure to any harmful Chemicals please give Date / Event / Description and Length of exposure",
+                type: "textarea",
+                placeholder: "Date / Event / Description",
+              },
+              {
+                name: "envPets",
+                label: "If you have Pets or Farm animals do they",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Family",
+            layout: "stacked",
+            fields: [
+              {
+                name: "familyCancer",
+                label:
+                  "Does the following member(s) currently or in the past have had Cancer (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyCancerDetails",
+                label:
+                  "For the above family member who have/had Cancer please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyHeartDisease",
+                label:
+                  "Does the following member(s) currently or in the past have had Heart disease (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyHeartDiseaseDetails",
+                label:
+                  "For the above family member who have/had Heart disease please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyHypertension",
+                label:
+                  "Does the following member(s) currently or in the past have had Hypertension (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyHypertensionDetails",
+                label:
+                  "For the above family member who have/had Hypertension please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyObesity",
+                label:
+                  "Does the following member(s) currently or in the past have had Obesity (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyObesityDetails",
+                label:
+                  "For the above family member who have/had Obesity please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyDiabetes",
+                label:
+                  "Does the following member(s) currently or in the past have had Diabetes (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyDiabetesDetails",
+                label:
+                  "For the above family member who have/had Diabetes please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyStroke",
+                label:
+                  "Does the following member(s) currently or in the past have had Stroke (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyStrokeDetails",
+                label:
+                  "For the above family member who have/had Stroke please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAutoimmune",
+                label:
+                  "Does the following member(s) currently or in the past have had Autoimmune disease (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAutoimmuneDetails",
+                label:
+                  "For the above family member who have/had Autoimmune disease please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyArthritis",
+                label:
+                  "Does the following member(s) currently or in the past have had Arthritis (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyArthritisDetails",
+                label:
+                  "For the above family member who have/had Arthritis please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyKidneyDisease",
+                label:
+                  "Does the following member(s) currently or in the past have had Kidney disease (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyKidneyDiseaseDetails",
+                label:
+                  "For the above family member who have/had Kidney disease please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyThyroidProblems",
+                label:
+                  "Does the following member(s) currently or in the past have had Thyroid problems (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyThyroidProblemsDetails",
+                label:
+                  "For the above family member who have/had Thyroid problems please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familySeizures",
+                label:
+                  "Does the following member(s) currently or in the past have had Seizures/Epllepsy (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familySeizuresDetails",
+                label:
+                  "For the above family member who have/had Seizures/Epllepsy please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyPsychiatric",
+                label:
+                  "Does the following member(s) currently or in the past have had Psychiatric disorders (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyPsychiatricDetails",
+                label:
+                  "For the above family member who have/had Psychiatric disorders please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAnxiety",
+                label:
+                  "Does the following member(s) currently or in the past have had Anxiety (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAnxietyDetails",
+                label:
+                  "For the above family member who have/had Anxiety please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyDepression",
+                label:
+                  "Does the following member(s) currently or in the past have had Depression (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyDepressionDetails",
+                label:
+                  "For the above family member who have/had Depression please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAsthma",
+                label:
+                  "Does the following member(s) currently or in the past have had Asthma (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAsthmaDetails",
+                label:
+                  "For the above family member who have/had Asthma please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyEczema",
+                label:
+                  "Does the following member(s) currently or in the past have had Eczema (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyEczemaDetails",
+                label:
+                  "For the above family member who have/had Eczema please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAdhd",
+                label:
+                  "Does the following member(s) currently or in the past have had ADHD (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAdhdDetails",
+                label:
+                  "For the above family member who have/had ADHD please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyAutism",
+                label:
+                  "Does the following member(s) currently or in the past have had Autism (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyAutismDetails",
+                label:
+                  "For the above family member who have/had Autism please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyIbs",
+                label:
+                  "Does the following member(s) currently or in the past have had Irritable Bowel Syndrome (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyIbsDetails",
+                label:
+                  "For the above family member who have/had Irritable Bowel Syndrome please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyDementia",
+                label:
+                  "Does the following member(s) currently or in the past have had Dementia (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyDementiaDetails",
+                label:
+                  "For the above family member who have/had Dementia please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familySubstanceUse",
+                label:
+                  "Does the following member(s) currently or in the past have had Substance Use Disorder (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familySubstanceUseDetails",
+                label:
+                  "For the above family member who have/had Substance Use Disorder please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyGeneticDisorders",
+                label:
+                  "Does the following member(s) currently or in the past have had Genetic disorder(s) (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyGeneticDisordersDetails",
+                label:
+                  "For the above family member who have/had Genetic disorders please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "familyOther",
+                label:
+                  "Does the following member(s) currently or in the past have had Other (select all that apply)",
+                type: "textarea",
+                placeholder: "List all that apply",
+              },
+              {
+                name: "familyOtherDetails",
+                label:
+                  "For the above family member who have/had Other please list their relationship to you and the age they are/were at time of death",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Gastrointestinal)",
+            description:
+              "Select YES if you CURRENTLY have the condition. Select PAST if you have had it in the past.",
+            layout: "stacked",
+            fields: [
+              {
+                name: "giIrritableBowel",
+                label: "IRRITABLE BOWEL",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giGerd",
+                label: "GERD (reflux)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giCrohns",
+                label: "CROHN'S DISEASE/ULCERATIVE COLITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giPepticUlcer",
+                label: "PEPTIC ULCER DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giCeliac",
+                label: "CELIAC DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giGallstones",
+                label: "GALLSTONES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "giOtherExplain",
+                label: "If you have OTHER: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Respiratory)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "respAsthma",
+                label: "ASTHMA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respEmphysema",
+                label: "EMPHYSEMA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respPneumonia",
+                label: "PNEUMONIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respSinusitis",
+                label: "SINUSITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respSleepApnea",
+                label: "SLEEP APNEA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "respOtherExplain",
+                label: "If you have OTHER Respiratory Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Urinary/Genital)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "urinaryKidneyStones",
+                label: "KIDNEY STONES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryGout",
+                label: "GOUT",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryInterstitialCystitis",
+                label: "INTERSTITIAL CYSTITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryYeastInfections",
+                label: "FREQUENT YEAST INFECTIONS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryUti",
+                label: "FREQUENT URINARY TRACT INFECTIONS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryDysfunction",
+                label: "SEXUAL DYSFUNCTION",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryStd",
+                label: "SEXUALLY TRANSMITTED DISEASES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "urinaryOtherExplain",
+                label: "If you have OTHER Urinary or Genital Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Endocrine/Metabolic)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "endoDiabetes",
+                label: "DIABETES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoHypothyroid",
+                label: "HYPOTHYROIDISM (Low Thyroid)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoHyperthyroid",
+                label: "HYPERTHYROIDISM (overactive thyroid)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoPcos",
+                label: "POLYCYSTIC OVARIAN SYNDROME (PCOS)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoInfertility",
+                label: "INFERTILITY",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoMetabolicSyndrome",
+                label: "METABOLIC SYNDROME/INSULIN RESISTANCE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoEatingDisorder",
+                label: "EATING DISORDER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoHypoglycemia",
+                label: "HYPOGLYCEMIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "endoOtherExplain",
+                label: "If you have OTHER Endocrine or Metabolic Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Inflammatory/Immune)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "immuneRheumatoid",
+                label: "RHEUMATOID ARTHRITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneChronicFatigue",
+                label: "CHRONIC FATIGUE SYNDROME",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneFoodAllergies",
+                label: "FOOD ALLERGIES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneEnvironmentalAllergies",
+                label: "ENVIRONMENTAL ALLERGIES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneChemicalSensitivity",
+                label: "MULTIPLE CHEMICAL SENSITIVITIES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneAutoimmune",
+                label: "AUTOIMMUNE DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneDeficiency",
+                label: "IMMUNE DEFICIENCY",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneMono",
+                label: "MONONUCLEOSIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneHepatitis",
+                label: "HEPATITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "immuneOtherExplain",
+                label: "If you have OTHER Immune or Inflammatory Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Musculoskeletal)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "msFibromyalgia",
+                label: "FIBROMYALGIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msOsteoarthritis",
+                label: "OSTEOARTHRITIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msChronicPain",
+                label: "CHRONIC PAIN",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "msOtherExplain",
+                label: "If you have OTHER Musculoskeletal Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Skin)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "skinEczema",
+                label: "ECZEMA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinPsoriasis",
+                label: "PSORIASIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinAcne",
+                label: "ACNE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinCancer",
+                label: "SKIN CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "skinOtherExplain",
+                label: "If you have OTHER Skin Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Cardiovascular)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "cardioAngina",
+                label: "ANGINA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHeartAttack",
+                label: "HEART ATTACK",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHeartFailure",
+                label: "HEART FAILURE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHypertension",
+                label: "HYPERTENSION (high blood pressure)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioStroke",
+                label: "STROKE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioHighBloodFats",
+                label: "HIGH BLOOD FATS (cholesterol, triglycerides)",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioRheumaticFever",
+                label: "RHEUMATIC FEVER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioArrythmia",
+                label: "ARRYTHMIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioMurmur",
+                label: "MURMUR",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioMitralValve",
+                label: "MITRAL VALVE PROLAPSE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cardioOtherExplain",
+                label: "If you have OTHER Cardiovascular Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Neurologic/Emotional)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "neuroSeizures",
+                label: "EPILEPSY / SEIZURES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroAddAdhd",
+                label: "ADD/ADHD",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroHeadaches",
+                label: "HEADACHES",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroMigraine",
+                label: "MIGRAINE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroDepression",
+                label: "DEPRESSION",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroAnxiety",
+                label: "ANXIETY",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroAutism",
+                label: "AUTISM",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroMultipleSclerosis",
+                label: "MULTIPLE SCLEROSIS",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroParkinsons",
+                label: "PARKINSON'S DISEASE",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroDementia",
+                label: "DEMENTIA",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "neuroOtherExplain",
+                label: "If you have OTHER Neurological Illnesses: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Medical Illnesses (Cancer)",
+            layout: "stacked",
+            fields: [
+              {
+                name: "cancerLung",
+                label: "LUNG CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerBreast",
+                label: "BREAST CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerColon",
+                label: "COLON CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerOvarian",
+                label: "OVARIAN CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerSkin",
+                label: "SKIN CANCER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerOther",
+                label: "OTHER",
+                type: "select",
+                options: ["Select", "Current", "Past"],
+              },
+              {
+                name: "cancerOtherExplain",
+                label: "If you have OTHER Cancer: Please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Procedures & Hospitalizations",
+            layout: "stacked",
+            fields: [
+              {
+                name: "hospitalizedEver",
+                label: "Have you ever been hospitalized?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "hospitalizedDetails",
+                label: "If yes, please list dates, reasons, and hospitals",
+                type: "textarea",
+                placeholder: "Date / Reason / Hospital",
+              },
+              {
+                name: "surgicalProcedures",
+                label: "Have you had any surgeries or procedures?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "surgicalProceduresDetails",
+                label: "If yes, please list dates, procedures, and reasons",
+                type: "textarea",
+                placeholder: "Date / Procedure / Reason",
+              },
+              {
+                name: "anesthesiaIssues",
+                label: "Have you ever had problems with anesthesia?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "anesthesiaIssuesDetails",
+                label: "If yes, please explain anesthesia issues",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "bloodTransfusion",
+                label: "Have you ever had a blood transfusion?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "bloodTransfusionDetails",
+                label: "If yes, please provide details",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "medicalImplants",
+                label:
+                  "Do you have any medical implants (e.g., pacemaker, joint replacement, metal plates)?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "medicalImplantsDetails",
+                label: "If yes, please list implants and dates",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "otherMedicalProcedures",
+                label: "Other procedures or medical events",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "History - Allergies",
+            layout: "stacked",
+            fields: [
+              {
+                name: "allergiesMedications",
+                label: "Do you have any medication allergies?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "allergiesMedicationsList",
+                label: "If yes, list medications and reactions",
+                type: "textarea",
+                placeholder: "Medication / Reaction",
+              },
+              {
+                name: "allergiesFood",
+                label: "Do you have any food allergies or sensitivities?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "allergiesFoodList",
+                label: "If yes, list foods and reactions",
+                type: "textarea",
+                placeholder: "Food / Reaction",
+              },
+              {
+                name: "allergiesEnvironmental",
+                label: "Do you have any environmental allergies?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "allergiesEnvironmentalList",
+                label: "If yes, list environmental triggers and reactions",
+                type: "textarea",
+                placeholder: "Trigger / Reaction",
+              },
+              {
+                name: "allergiesLatex",
+                label: "Do you have a latex allergy?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "allergiesLatexDetails",
+                label: "If yes, please describe",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "allergiesOther",
+                label: "Any other allergies or sensitivities?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Lifestyle",
+            layout: "stacked",
+            fields: [
+              {
+                name: "lifestyleOccupation",
+                label: "Occupation/Primary role",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "lifestyleWorkHours",
+                label: "Typical work hours per week",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "lifestyleActivityLevel",
+                label: "Activity level",
+                type: "select",
+                options: ["Select", "Sedentary", "Light", "Moderate", "Active", "Very Active"],
+              },
+              {
+                name: "lifestyleExerciseFrequency",
+                label: "How often do you exercise?",
+                type: "text",
+                placeholder: "Times per week",
+              },
+              {
+                name: "lifestyleExerciseType",
+                label: "What types of exercise do you do?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "lifestyleSleepHours",
+                label: "Average hours of sleep per night",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "lifestyleSleepQuality",
+                label: "How would you rate your sleep quality?",
+                type: "select",
+                options: ["Select", "Poor", "Fair", "Good", "Excellent"],
+              },
+              {
+                name: "lifestyleStressLevel",
+                label: "Current stress level",
+                type: "select",
+                options: ["Select", "Low", "Moderate", "High", "Very High"],
+              },
+              {
+                name: "lifestyleStressNotes",
+                label: "Primary sources of stress",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "lifestyleRelaxation",
+                label: "What do you do to relax or unwind?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Nutrition",
+            layout: "stacked",
+            fields: [
+              {
+                name: "nutritionDietStyle",
+                label: "Describe your typical diet",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionMealsPerDay",
+                label: "How many meals do you eat per day?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionSnacks",
+                label: "Do you snack between meals?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "nutritionSnacksDetails",
+                label: "If yes, what kinds of snacks?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionWaterIntake",
+                label: "How much water do you drink daily?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionCaffeine",
+                label: "Do you consume caffeine?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "nutritionCaffeineDetails",
+                label: "If yes, how much and what type?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionFoodCravings",
+                label: "Any food cravings?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "nutritionRestrictions",
+                label: "Dietary restrictions or special diets",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Smoking & Tobacco",
+            layout: "stacked",
+            fields: [
+              {
+                name: "smokingStatus",
+                label: "Do you currently smoke or use tobacco products?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "smokingProducts",
+                label: "If yes, what products do you use?",
+                type: "textarea",
+                placeholder: "Cigarettes, vape, cigars, chewing tobacco, etc.",
+              },
+              {
+                name: "smokingAmount",
+                label: "How much do you use per day?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "smokingYears",
+                label: "How many years have you used tobacco?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "smokingFormer",
+                label: "If you previously used tobacco, when did you quit?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "secondhandSmoke",
+                label: "Are you exposed to secondhand smoke?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "secondhandSmokeDetails",
+                label: "If yes, describe exposure",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Alcohol",
+            layout: "stacked",
+            fields: [
+              {
+                name: "alcoholUse",
+                label: "Do you drink alcohol?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "alcoholFrequency",
+                label: "If yes, how often?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "alcoholType",
+                label: "What types of alcohol do you drink?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "alcoholAmount",
+                label: "How many drinks per week?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "alcoholBinge",
+                label: "Have you ever been told you drink too much or had binge episodes?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "alcoholBingeDetails",
+                label: "If yes, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Other Substances",
+            layout: "stacked",
+            fields: [
+              {
+                name: "substancesRecreational",
+                label: "Do you use recreational drugs or other substances?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "substancesRecreationalTypes",
+                label: "If yes, which substances?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "substancesFrequency",
+                label: "How often do you use them?",
+                type: "text",
+                placeholder: "Response",
+              },
+              {
+                name: "substancesPastUse",
+                label: "Have you used substances in the past?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "substancesPastDetails",
+                label: "If yes, please explain past use",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "substancesPrescriptionMisuse",
+                label: "Have you ever misused prescription medications?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "substancesPrescriptionMisuseDetails",
+                label: "If yes, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Stress & Emotional Wellbeing",
+            layout: "stacked",
+            fields: [
+              {
+                name: "stressCurrentLevel",
+                label: "How would you rate your current stress level?",
+                type: "select",
+                options: ["Select", "Low", "Moderate", "High", "Very High"],
+              },
+              {
+                name: "stressPrimarySources",
+                label: "What are your primary sources of stress?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "stressCoping",
+                label: "How do you cope with stress?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "stressSleepImpact",
+                label: "Does stress impact your sleep?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "stressMoodImpact",
+                label: "Does stress impact your mood or energy?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "stressSupport",
+                label: "Do you feel you have adequate support?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "stressSupportDetails",
+                label: "If no, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Relationships",
+            layout: "stacked",
+            fields: [
+              {
+                name: "relationshipStatus",
+                label: "Relationship status",
+                type: "select",
+                options: [
+                  "Select",
+                  "Single",
+                  "Partnered",
+                  "Married",
+                  "Separated",
+                  "Divorced",
+                  "Widowed",
+                ],
+              },
+              {
+                name: "relationshipSupport",
+                label: "Do you feel supported by your close relationships?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "relationshipSupportDetails",
+                label: "If no, please explain",
+                type: "textarea",
+                placeholder: "Response",
+              },
+              {
+                name: "relationshipConcerns",
+                label: "Any relationship concerns you want us to know about?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Well-being Ratings",
+            description: "Rate each area on a scale of 0–10 (0 = lowest, 10 = highest).",
+            layout: "stacked",
+            fields: [
+              {
+                name: "wellbeingEnergy",
+                label: "Energy",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingMood",
+                label: "Mood",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingSleep",
+                label: "Sleep quality",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingDigestion",
+                label: "Digestion",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+              {
+                name: "wellbeingStress",
+                label: "Stress management",
+                type: "select",
+                options: ["Select", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+              },
+            ],
+          },
+          {
+            title: "Symptoms Review",
+            layout: "stacked",
+            fields: [
+              {
+                name: "symptomsReview",
+                label: "Please list any current symptoms and how long you have had them",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Medications & Supplements",
+            layout: "stacked",
+            fields: [
+              {
+                name: "currentMedications",
+                label: "List all current medications (name, dose, frequency)",
+                type: "textarea",
+                placeholder: "Medication / Dose / Frequency",
+              },
+              {
+                name: "currentSupplements",
+                label: "List all current supplements (name, dose, frequency)",
+                type: "textarea",
+                placeholder: "Supplement / Dose / Frequency",
+              },
+              {
+                name: "medicationReactions",
+                label: "Any adverse reactions to medications or supplements?",
+                type: "textarea",
+                placeholder: "Response",
+              },
+            ],
+          },
+          {
+            title: "Antibiotics & Steroids History",
+            layout: "stacked",
+            fields: [
+              {
+                name: "antibioticsUse",
+                label: "Have you taken antibiotics frequently?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "antibioticsDetails",
+                label: "If yes, please list dates, frequency, and reasons",
+                type: "textarea",
+                placeholder: "Date / Frequency / Reason",
+              },
+              {
+                name: "steroidsUse",
+                label: "Have you taken steroid medications?",
+                type: "select",
+                options: ["Select", "Yes", "No"],
+              },
+              {
+                name: "steroidsDetails",
+                label: "If yes, please list dates, frequency, and reasons",
+                type: "textarea",
+                placeholder: "Date / Frequency / Reason",
               },
             ],
           },
