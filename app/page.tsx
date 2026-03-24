@@ -36,6 +36,26 @@ import { Layout } from "@/components/globals/Layout";
 export const metadata: Metadata = {
   title: "Home",
   description: "Personalized nutrition and wellness coaching for a balanced life.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Living in Vibrance",
+    description: "Personalized nutrition and wellness coaching for a balanced life.",
+    url: "/",
+    images: [
+      {
+        url: "/assets/images/LIV_Homepage.png",
+        alt: "Living in Vibrance homepage preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Living in Vibrance",
+    description: "Personalized nutrition and wellness coaching for a balanced life.",
+    images: ["/assets/images/LIV_Homepage.png"],
+  },
 };
 
 export default function HomePage() {

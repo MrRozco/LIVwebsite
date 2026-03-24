@@ -78,6 +78,26 @@ All text, labels, and assets are original placeholders. Replace `public/assets` 
 - Metadata per page in each route file
 - robots.ts and sitemap.ts in app/
 
+### Production SEO Configuration
+
+- Primary domain: https://www.livinginvibrance.com
+- Canonical URLs configured for main routes
+- Open Graph and Twitter card images configured
+- JSON-LD structured data added for `WebSite`, `Organization`, and `LocalBusiness`
+- Non-production indexing disabled via `robots.ts`
+
+Optional environment variables for webmaster verification:
+
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+- `NEXT_PUBLIC_BING_SITE_VERIFICATION`
+
+### Manual SEO Tasks (recommended)
+
+- Connect Google Search Console and Bing Webmaster Tools
+- Submit `https://www.livinginvibrance.com/sitemap.xml`
+- Connect analytics and conversion tracking for leads/forms
+- Build internal links from informational content to `/assessment` and `/contact`
+
 ## Notes
 
 - Primary home is in app/page.tsx (temporary due to tooling limitations). Move to app/(site)/page.tsx once app/page.tsx is removed.
