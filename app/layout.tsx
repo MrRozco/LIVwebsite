@@ -8,6 +8,8 @@ const siteUrl = "https://www.livinginvibrance.com";
 const siteName = "Living in Vibrance";
 const isProduction =
   process.env.VERCEL_ENV === "production" || process.env.NODE_ENV === "production";
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
 
 const headingFont = Merriweather({
   variable: "--font-heading",
@@ -70,12 +72,20 @@ export const metadata: Metadata = {
         follow: false,
         nocache: true,
       },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-    other: {
-      "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
-    },
-  },
+  ...(googleSiteVerification || bingSiteVerification
+    ? {
+        verification: {
+          ...(googleSiteVerification ? { google: googleSiteVerification } : {}),
+          ...(bingSiteVerification
+            ? {
+                other: {
+                  "msvalidate.01": bingSiteVerification,
+                },
+              }
+            : {}),
+        },
+      }
+    : {}),
   icons: {
     icon: "/assets/favicon.svg",
   },
