@@ -87,7 +87,14 @@ export const metadata: Metadata = {
       }
     : {}),
   icons: {
-    icon: "/assets/favicon.svg",
+    icon: [
+      {
+        url: "/assets/images/livinginvibrance_logo_no_font.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/assets/images/livinginvibrance_logo_no_font.png",
+    apple: "/assets/images/livinginvibrance_logo_no_font.png",
   },
 };
 

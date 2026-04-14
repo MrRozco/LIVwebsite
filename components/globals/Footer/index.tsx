@@ -49,12 +49,18 @@ export function Footer() {
               </a>
             </li>
             <li>Mon – Sat: 7:00 AM – 7:00 PM</li>
-            <li>Sun: Closed</li>
+            <li>Appointments Only</li>
           </ul>
         </div>
       </div>
       <div className="container footer__bottom">
-        <span>© 2026 Living in Vibrance. All rights reserved.</span>
+        <span>
+          © 2026 Living in Vibrance. All rights reserved. Site made by{" "}
+          <a href="https://appleseedsites.com" target="_blank" rel="noopener noreferrer">
+            AppleSeedSites
+          </a>
+          .
+        </span>
       </div>
     </footer>
   );
