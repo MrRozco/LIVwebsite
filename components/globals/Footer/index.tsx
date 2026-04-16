@@ -15,7 +15,7 @@ export function Footer() {
               height={200}
             />
           </div>
-          <p>Thoughtful nutrition support, built around your lifestyle and goals.</p>
+          <p>Personalized functional wellness, designed for your life and goals.</p>
         </div>
         <div>
           <h4>Explore</h4>
